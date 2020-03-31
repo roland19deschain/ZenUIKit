@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F7E720AB2433FCC1004BAF12 /* ZenUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E720A92433FCC1004BAF12 /* ZenUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7E720B32433FE06004BAF12 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E720B22433FE06004BAF12 /* UIColor+Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F7E720A62433FCC1004BAF12 /* ZenUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZenUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E720A92433FCC1004BAF12 /* ZenUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZenUIKit.h; sourceTree = "<group>"; };
 		F7E720AA2433FCC1004BAF12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7E720B22433FE06004BAF12 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		F7E720A82433FCC1004BAF12 /* ZenUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				F7E720B42433FFA1004BAF12 /* SourceCode */,
 				F7E720B12433FCF7004BAF12 /* SupportingFiles */,
 			);
 			path = ZenUIKit;
@@ -58,6 +61,30 @@
 				F7E720AA2433FCC1004BAF12 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F7E720B42433FFA1004BAF12 /* SourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				F7E720B52433FFAA004BAF12 /* Extensions */,
+			);
+			path = SourceCode;
+			sourceTree = "<group>";
+		};
+		F7E720B52433FFAA004BAF12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7E720B62433FFAE004BAF12 /* Color */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7E720B62433FFAE004BAF12 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				F7E720B22433FE06004BAF12 /* UIColor+Random.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +130,7 @@
 				TargetAttributes = {
 					F7E720A52433FCC1004BAF12 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -139,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E720B32433FE06004BAF12 /* UIColor+Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +297,7 @@
 		F7E720AF2433FCC1004BAF12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7CK9FQY54K;
@@ -285,6 +315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ZenUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,6 +324,7 @@
 		F7E720B02433FCC1004BAF12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7CK9FQY54K;
