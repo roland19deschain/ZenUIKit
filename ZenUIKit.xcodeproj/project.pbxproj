@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7E63318244508BA004C3F1F /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E63317244508BA004C3F1F /* UIImage+Tint.swift */; };
 		F7E720AB2433FCC1004BAF12 /* ZenUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E720A92433FCC1004BAF12 /* ZenUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7E720B32433FE06004BAF12 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E720B22433FE06004BAF12 /* UIColor+Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F7E63317244508BA004C3F1F /* UIImage+Tint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Tint.swift"; sourceTree = "<group>"; };
 		F7E720A62433FCC1004BAF12 /* ZenUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZenUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E720A92433FCC1004BAF12 /* ZenUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZenUIKit.h; sourceTree = "<group>"; };
 		F7E720AA2433FCC1004BAF12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +31,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7E63319244508BF004C3F1F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F7E63317244508BA004C3F1F /* UIImage+Tint.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		F7E7209C2433FCC1004BAF12 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				F7E720B62433FFAE004BAF12 /* Color */,
+				F7E63319244508BF004C3F1F /* Image */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E63318244508BA004C3F1F /* UIImage+Tint.swift in Sources */,
 				F7E720B32433FE06004BAF12 /* UIColor+Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
