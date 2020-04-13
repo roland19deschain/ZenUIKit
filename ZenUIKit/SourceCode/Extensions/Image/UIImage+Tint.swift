@@ -7,7 +7,7 @@ public extension UIImage {
 	- parameter color: Fill color for image.
 	- returns: Tinted picture.
 	*/
-	func tinted(in color: UIColor) -> UIImage {
+	func tinted(withg color: UIColor) -> UIImage {
 		guard let maskImage = cgImage else {
 			return self
 		}
