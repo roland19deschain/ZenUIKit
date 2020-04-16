@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F71AE4BA2449116400FEE2B4 /* UIColor+Introspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4B92449116400FEE2B4 /* UIColor+Introspection.swift */; };
+		F71AE4BC2449131B00FEE2B4 /* UIBezierPath+ExcludeOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4BB2449131B00FEE2B4 /* UIBezierPath+ExcludeOverlap.swift */; };
+		F71AE4BF244913EA00FEE2B4 /* UIBezierPath+Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4BE244913EA00FEE2B4 /* UIBezierPath+Intersection.swift */; };
+		F71AE4C12449141400FEE2B4 /* UIBezierPath+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4C02449141400FEE2B4 /* UIBezierPath+Rotate.swift */; };
+		F71AE4C32449146100FEE2B4 /* UIBezierPath+Inverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4C22449146100FEE2B4 /* UIBezierPath+Inverse.swift */; };
+		F71AE4C52449167400FEE2B4 /* UIBezierPath+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4C42449167400FEE2B4 /* UIBezierPath+Scale.swift */; };
+		F71AE4C7244916ED00FEE2B4 /* UIBezierPath+StrokeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4C6244916ED00FEE2B4 /* UIBezierPath+StrokeArea.swift */; };
 		F7E63318244508BA004C3F1F /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E63317244508BA004C3F1F /* UIImage+Tint.swift */; };
 		F7E633432445248A004C3F1F /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E633422445248A004C3F1F /* UIImage+Crop.swift */; };
 		F7E720AB2433FCC1004BAF12 /* ZenUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E720A92433FCC1004BAF12 /* ZenUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -14,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F71AE4B92449116400FEE2B4 /* UIColor+Introspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Introspection.swift"; sourceTree = "<group>"; };
+		F71AE4BB2449131B00FEE2B4 /* UIBezierPath+ExcludeOverlap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+ExcludeOverlap.swift"; sourceTree = "<group>"; };
+		F71AE4BE244913EA00FEE2B4 /* UIBezierPath+Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Intersection.swift"; sourceTree = "<group>"; };
+		F71AE4C02449141400FEE2B4 /* UIBezierPath+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Rotate.swift"; sourceTree = "<group>"; };
+		F71AE4C22449146100FEE2B4 /* UIBezierPath+Inverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Inverse.swift"; sourceTree = "<group>"; };
+		F71AE4C42449167400FEE2B4 /* UIBezierPath+Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Scale.swift"; sourceTree = "<group>"; };
+		F71AE4C6244916ED00FEE2B4 /* UIBezierPath+StrokeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+StrokeArea.swift"; sourceTree = "<group>"; };
 		F7E63317244508BA004C3F1F /* UIImage+Tint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Tint.swift"; sourceTree = "<group>"; };
 		F7E633422445248A004C3F1F /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
 		F7E720A62433FCC1004BAF12 /* ZenUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZenUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F71AE4BD2449133600FEE2B4 /* BezierPath */ = {
+			isa = PBXGroup;
+			children = (
+				F71AE4BB2449131B00FEE2B4 /* UIBezierPath+ExcludeOverlap.swift */,
+				F71AE4BE244913EA00FEE2B4 /* UIBezierPath+Intersection.swift */,
+				F71AE4C6244916ED00FEE2B4 /* UIBezierPath+StrokeArea.swift */,
+				F71AE4C22449146100FEE2B4 /* UIBezierPath+Inverse.swift */,
+				F71AE4C02449141400FEE2B4 /* UIBezierPath+Rotate.swift */,
+				F71AE4C42449167400FEE2B4 /* UIBezierPath+Scale.swift */,
+			);
+			path = BezierPath;
+			sourceTree = "<group>";
+		};
 		F7E63319244508BF004C3F1F /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +116,7 @@
 			children = (
 				F7E720B62433FFAE004BAF12 /* Color */,
 				F7E63319244508BF004C3F1F /* Image */,
+				F71AE4BD2449133600FEE2B4 /* BezierPath */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -97,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				F7E720B22433FE06004BAF12 /* UIColor+Random.swift */,
+				F71AE4B92449116400FEE2B4 /* UIColor+Introspection.swift */,
 			);
 			path = Color;
 			sourceTree = "<group>";
@@ -181,7 +210,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71AE4C32449146100FEE2B4 /* UIBezierPath+Inverse.swift in Sources */,
+				F71AE4BC2449131B00FEE2B4 /* UIBezierPath+ExcludeOverlap.swift in Sources */,
 				F7E63318244508BA004C3F1F /* UIImage+Tint.swift in Sources */,
+				F71AE4BF244913EA00FEE2B4 /* UIBezierPath+Intersection.swift in Sources */,
+				F71AE4C7244916ED00FEE2B4 /* UIBezierPath+StrokeArea.swift in Sources */,
+				F71AE4C52449167400FEE2B4 /* UIBezierPath+Scale.swift in Sources */,
+				F71AE4BA2449116400FEE2B4 /* UIColor+Introspection.swift in Sources */,
+				F71AE4C12449141400FEE2B4 /* UIBezierPath+Rotate.swift in Sources */,
 				F7E720B32433FE06004BAF12 /* UIColor+Random.swift in Sources */,
 				F7E633432445248A004C3F1F /* UIImage+Crop.swift in Sources */,
 			);
