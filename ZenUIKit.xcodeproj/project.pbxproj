@@ -17,6 +17,9 @@
 		F71AE4C92449175200FEE2B4 /* UIView+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4C82449175200FEE2B4 /* UIView+Initialization.swift */; };
 		F71AE4CC244917CF00FEE2B4 /* UIView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4CB244917CF00FEE2B4 /* UIView+Convenience.swift */; };
 		F71AE4CE2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4CD2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift */; };
+		F7DAC34A244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC349244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift */; };
+		F7DAC34D244CFD84003675B0 /* UITableView+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC34C244CFD84003675B0 /* UITableView+CellConfiguration.swift */; };
+		F7DAC34F244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC34E244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift */; };
 		F7E63318244508BA004C3F1F /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E63317244508BA004C3F1F /* UIImage+Tint.swift */; };
 		F7E633432445248A004C3F1F /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E633422445248A004C3F1F /* UIImage+Crop.swift */; };
 		F7E720AB2433FCC1004BAF12 /* ZenUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E720A92433FCC1004BAF12 /* ZenUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +37,9 @@
 		F71AE4C82449175200FEE2B4 /* UIView+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Initialization.swift"; sourceTree = "<group>"; };
 		F71AE4CB244917CF00FEE2B4 /* UIView+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Convenience.swift"; sourceTree = "<group>"; };
 		F71AE4CD2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ScrollTo.swift"; sourceTree = "<group>"; };
+		F7DAC349244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReuseIdentifiers.swift"; sourceTree = "<group>"; };
+		F7DAC34C244CFD84003675B0 /* UITableView+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellConfiguration.swift"; sourceTree = "<group>"; };
+		F7DAC34E244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderFooterConfiguration.swift"; sourceTree = "<group>"; };
 		F7E63317244508BA004C3F1F /* UIImage+Tint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Tint.swift"; sourceTree = "<group>"; };
 		F7E633422445248A004C3F1F /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
 		F7E720A62433FCC1004BAF12 /* ZenUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZenUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +87,16 @@
 				F71AE4CD2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift */,
 			);
 			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		F7DAC34B244CFB0D003675B0 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F7DAC349244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift */,
+				F7DAC34C244CFD84003675B0 /* UITableView+CellConfiguration.swift */,
+				F7DAC34E244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		F7E63319244508BF004C3F1F /* Image */ = {
@@ -139,6 +155,7 @@
 			children = (
 				F71AE4CA2449175500FEE2B4 /* View */,
 				F71AE4CF2449189700FEE2B4 /* ScrollView */,
+				F7DAC34B244CFB0D003675B0 /* TableView */,
 				F7E720B62433FFAE004BAF12 /* Color */,
 				F7E63319244508BF004C3F1F /* Image */,
 				F71AE4BD2449133600FEE2B4 /* BezierPath */,
@@ -240,6 +257,7 @@
 				F71AE4BC2449131B00FEE2B4 /* UIBezierPath+ExcludeOverlap.swift in Sources */,
 				F7E63318244508BA004C3F1F /* UIImage+Tint.swift in Sources */,
 				F71AE4BF244913EA00FEE2B4 /* UIBezierPath+Intersection.swift in Sources */,
+				F7DAC34D244CFD84003675B0 /* UITableView+CellConfiguration.swift in Sources */,
 				F71AE4C7244916ED00FEE2B4 /* UIBezierPath+StrokeArea.swift in Sources */,
 				F71AE4C52449167400FEE2B4 /* UIBezierPath+Scale.swift in Sources */,
 				F71AE4BA2449116400FEE2B4 /* UIColor+Introspection.swift in Sources */,
@@ -247,7 +265,9 @@
 				F71AE4CC244917CF00FEE2B4 /* UIView+Convenience.swift in Sources */,
 				F71AE4C12449141400FEE2B4 /* UIBezierPath+Rotate.swift in Sources */,
 				F7E720B32433FE06004BAF12 /* UIColor+Random.swift in Sources */,
+				F7DAC34F244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift in Sources */,
 				F7E633432445248A004C3F1F /* UIImage+Crop.swift in Sources */,
+				F7DAC34A244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
