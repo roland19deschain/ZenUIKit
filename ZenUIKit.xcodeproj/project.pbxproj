@@ -17,6 +17,8 @@
 		F71AE4C92449175200FEE2B4 /* UIView+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4C82449175200FEE2B4 /* UIView+Initialization.swift */; };
 		F71AE4CC244917CF00FEE2B4 /* UIView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4CB244917CF00FEE2B4 /* UIView+Convenience.swift */; };
 		F71AE4CE2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4CD2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift */; };
+		F77941F42450E7EA00324E40 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77941F32450E7EA00324E40 /* String+Convenience.swift */; };
+		F77941F72450E87400324E40 /* UIColor+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77941F62450E87400324E40 /* UIColor+Initialization.swift */; };
 		F7A9217C244F9588000BFE33 /* Array+LayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9217B244F9588000BFE33 /* Array+LayoutConstraints.swift */; };
 		F7A9217F244F9653000BFE33 /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9217E244F9653000BFE33 /* UIImage+Rotate.swift */; };
 		F7A92181244F9910000BFE33 /* Int+Computation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A92180244F9910000BFE33 /* Int+Computation.swift */; };
@@ -49,6 +51,8 @@
 		F71AE4C82449175200FEE2B4 /* UIView+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Initialization.swift"; sourceTree = "<group>"; };
 		F71AE4CB244917CF00FEE2B4 /* UIView+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Convenience.swift"; sourceTree = "<group>"; };
 		F71AE4CD2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ScrollTo.swift"; sourceTree = "<group>"; };
+		F77941F32450E7EA00324E40 /* String+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Convenience.swift"; sourceTree = "<group>"; };
+		F77941F62450E87400324E40 /* UIColor+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Initialization.swift"; sourceTree = "<group>"; };
 		F7A9217B244F9588000BFE33 /* Array+LayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+LayoutConstraints.swift"; sourceTree = "<group>"; };
 		F7A9217E244F9653000BFE33 /* UIImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
 		F7A92180244F9910000BFE33 /* Int+Computation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Computation.swift"; sourceTree = "<group>"; };
@@ -114,6 +118,14 @@
 			path = ScrollView;
 			sourceTree = "<group>";
 		};
+		F77941F52450E85700324E40 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				F77941F32450E7EA00324E40 /* String+Convenience.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		F7A9217D244F95EB000BFE33 /* LayoutConstraint */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F7A92183244F9918000BFE33 /* Int */,
+				F77941F52450E85700324E40 /* String */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -258,6 +271,7 @@
 		F7E720B62433FFAE004BAF12 /* Color */ = {
 			isa = PBXGroup;
 			children = (
+				F77941F62450E87400324E40 /* UIColor+Initialization.swift */,
 				F7E720B22433FE06004BAF12 /* UIColor+Random.swift */,
 				F71AE4B92449116400FEE2B4 /* UIColor+Introspection.swift */,
 			);
@@ -349,6 +363,7 @@
 				F71AE4BC2449131B00FEE2B4 /* UIBezierPath+ExcludeOverlap.swift in Sources */,
 				F7E63318244508BA004C3F1F /* UIImage+Tint.swift in Sources */,
 				F7A92189244F9E7B000BFE33 /* UIViewController+AddChild.swift in Sources */,
+				F77941F72450E87400324E40 /* UIColor+Initialization.swift in Sources */,
 				F7A92185244F9A88000BFE33 /* UIImage+Scale.swift in Sources */,
 				F71AE4BF244913EA00FEE2B4 /* UIBezierPath+Intersection.swift in Sources */,
 				F7A92193244FA384000BFE33 /* UIImage+Color.swift in Sources */,
@@ -369,6 +384,7 @@
 				F7A92181244F9910000BFE33 /* Int+Computation.swift in Sources */,
 				F7DAC34F244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift in Sources */,
 				F7A9217F244F9653000BFE33 /* UIImage+Rotate.swift in Sources */,
+				F77941F42450E7EA00324E40 /* String+Convenience.swift in Sources */,
 				F7E633432445248A004C3F1F /* UIImage+Crop.swift in Sources */,
 				F7DAC34A244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift in Sources */,
 				F7A92187244F9B01000BFE33 /* UIImage+Initialization.swift in Sources */,

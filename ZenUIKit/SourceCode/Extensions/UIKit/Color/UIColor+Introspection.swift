@@ -7,7 +7,7 @@ public extension UIColor {
 		CIColor(color: self)
 	}
 	
-	/// Return a tuple with the unpremultiplied components of the color (red, green, blue) and alpha.
+	/// Returns a tuple with the unpremultiplied components of the color (red, green, blue) and alpha.
 	var components: (
 		red: CGFloat,
 		green: CGFloat,
@@ -22,6 +22,29 @@ public extension UIColor {
 			ciColor.blue,
 			ciColor.alpha
 		)
+	}
+	
+	/// Returns the color as hexadecimal number.
+	var hex: Int {
+		var red: CGFloat = 0
+		var green: CGFloat = 0
+		var blue: CGFloat = 0
+		var alpha: CGFloat = 0
+		
+		getRed(
+			&red,
+			green: &green,
+			blue: &blue,
+			alpha: &alpha
+		)
+		return Int(red * 255) << 16
+			| Int(green * 255) << 8
+			| Int(blue * 255) << 0
+	}
+	
+	/// Returns the color as string with hexadecimal number.
+	var hexString: String  {
+		String(format: "%06x", hex).uppercased()
 	}
 	
 }

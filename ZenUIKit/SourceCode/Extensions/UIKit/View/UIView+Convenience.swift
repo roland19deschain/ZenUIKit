@@ -17,4 +17,24 @@ public extension UIView {
 		}
 	}
 	
+	/// Returns an image with complete view hierarchy visible on screen.
+	var snapshot: UIImage? {
+		UIGraphicsBeginImageContextWithOptions(
+			frame.size,
+			false,
+			UIScreen.main.scale
+		)
+		
+		defer {
+			UIGraphicsEndImageContext()
+		}
+		
+		drawHierarchy(
+			in: frame,
+			afterScreenUpdates: true
+		)
+		
+		return UIGraphicsGetImageFromCurrentImageContext()
+	}
+	
 }
