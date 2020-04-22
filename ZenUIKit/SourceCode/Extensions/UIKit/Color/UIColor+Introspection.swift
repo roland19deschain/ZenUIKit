@@ -15,6 +15,7 @@ public extension UIColor {
 		alpha: CGFloat
 		) {
 		let ciColor = coreImageColor
+		
 		return (
 			ciColor.red,
 			ciColor.green,

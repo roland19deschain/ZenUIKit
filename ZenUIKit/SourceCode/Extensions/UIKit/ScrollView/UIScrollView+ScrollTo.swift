@@ -4,8 +4,8 @@ public extension UIScrollView {
 	
 	/**
 	Scrolls content to the top edge.
-	- parameter animated: true to animate the transition at a constant velocity,
-	false to make the transition immediate.
+	- parameter animated: Specify _true_ to animate the transition at a constant velocity,
+	_false_ to make the transition immediate.
 	*/
 	func scrollToTop(animated: Bool) {
 		setContentOffset(
@@ -16,8 +16,8 @@ public extension UIScrollView {
 	
 	/**
 	Scrolls content to the bottom edge.
-	- parameter animated: true to animate the transition at a constant velocity,
-	false to make the transition immediate.
+	- parameter animated: Specify _true_ to animate the transition at a constant velocity,
+	_false_ to make the transition immediate.
 	*/
 	func scrollToBottom(animated: Bool) {
 		let y: CGFloat = max(contentSize.height - bounds.height, 0)

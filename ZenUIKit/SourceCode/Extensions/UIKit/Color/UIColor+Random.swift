@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIColor {
+public extension UIColor {
 	
 	/// Returns an opaque color (alpha 1) with random RGB values.
 	static var opaqueRandom: UIColor {

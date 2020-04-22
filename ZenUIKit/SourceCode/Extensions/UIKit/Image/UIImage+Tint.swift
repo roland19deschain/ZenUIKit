@@ -5,7 +5,7 @@ public extension UIImage {
 	/**
 	Fills all opaque pixels of the image with color.
 	- parameter color: Fill color for image.
-	- returns: Tinted picture.
+	- returns: The tinted picture.
 	*/
 	func tinted(withg color: UIColor) -> UIImage {
 		guard let maskImage = cgImage else {
