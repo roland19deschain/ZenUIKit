@@ -258,6 +258,7 @@
 		F7E720B42433FFA1004BAF12 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				F7F68B0124622AC400311468 /* Views */,
 				F7E720B52433FFAA004BAF12 /* Extensions */,
 			);
 			path = SourceCode;
@@ -266,7 +267,6 @@
 		F7E720B52433FFAA004BAF12 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F7F68B0124622AC400311468 /* Views */,
 				F7A9218B244FA153000BFE33 /* UIKit */,
 				F7A92182244F9914000BFE33 /* Swift */,
 			);
