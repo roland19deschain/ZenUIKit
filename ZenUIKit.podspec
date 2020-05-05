@@ -2,9 +2,9 @@ Pod::Spec.new do |s|
   s.name             = 'ZenUIKit'
   s.version          = '1.2.0'
   s.swift_version    = '5.0'
-  s.summary          = 'ZenUIKit is a collection of extensions and functions for UIKit framework.'
+  s.summary          = 'ZenUIKit is a collection of views, extensions and functions for UIKit framework.'
   s.description      = <<-DESC
-ZenUIKit is a collection of convenient and concise extensions and functions for UIKit framework..
+ZenUIKit is a collection of convenient and concise extensions, views and functions for UIKit framework..
                        DESC
   s.homepage         = 'https://github.com/roland19deschain/ZenUIKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
