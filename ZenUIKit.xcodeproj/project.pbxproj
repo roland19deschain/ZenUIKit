@@ -38,6 +38,8 @@
 		F7E633432445248A004C3F1F /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E633422445248A004C3F1F /* UIImage+Crop.swift */; };
 		F7E720AB2433FCC1004BAF12 /* ZenUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E720A92433FCC1004BAF12 /* ZenUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7E720B32433FE06004BAF12 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E720B22433FE06004BAF12 /* UIColor+Random.swift */; };
+		F7F68B0024622ABE00311468 /* AutosizingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F68AFF24622ABE00311468 /* AutosizingTextView.swift */; };
+		F7F68B0424622AE400311468 /* AutosizingTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F68B0324622AE400311468 /* AutosizingTextViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		F7E720A92433FCC1004BAF12 /* ZenUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZenUIKit.h; sourceTree = "<group>"; };
 		F7E720AA2433FCC1004BAF12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7E720B22433FE06004BAF12 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+		F7F68AFF24622ABE00311468 /* AutosizingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosizingTextView.swift; sourceTree = "<group>"; };
+		F7F68B0324622AE400311468 /* AutosizingTextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosizingTextViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +266,7 @@
 		F7E720B52433FFAA004BAF12 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F7F68B0124622AC400311468 /* Views */,
 				F7A9218B244FA153000BFE33 /* UIKit */,
 				F7A92182244F9914000BFE33 /* Swift */,
 			);
@@ -276,6 +281,31 @@
 				F71AE4B92449116400FEE2B4 /* UIColor+Introspection.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		F7F68B0124622AC400311468 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7F68B0224622AC900311468 /* TextView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7F68B0224622AC900311468 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				F7F68B0524622AFA00311468 /* AutosizingTextView */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		F7F68B0524622AFA00311468 /* AutosizingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				F7F68AFF24622ABE00311468 /* AutosizingTextView.swift */,
+				F7F68B0324622AE400311468 /* AutosizingTextViewDelegate.swift */,
+			);
+			path = AutosizingTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +394,7 @@
 				F7E63318244508BA004C3F1F /* UIImage+Tint.swift in Sources */,
 				F7A92189244F9E7B000BFE33 /* UIViewController+AddChild.swift in Sources */,
 				F77941F72450E87400324E40 /* UIColor+Initialization.swift in Sources */,
+				F7F68B0424622AE400311468 /* AutosizingTextViewDelegate.swift in Sources */,
 				F7A92185244F9A88000BFE33 /* UIImage+Scale.swift in Sources */,
 				F71AE4BF244913EA00FEE2B4 /* UIBezierPath+Intersection.swift in Sources */,
 				F7A92193244FA384000BFE33 /* UIImage+Color.swift in Sources */,
@@ -388,6 +419,7 @@
 				F7E633432445248A004C3F1F /* UIImage+Crop.swift in Sources */,
 				F7DAC34A244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift in Sources */,
 				F7A92187244F9B01000BFE33 /* UIImage+Initialization.swift in Sources */,
+				F7F68B0024622ABE00311468 /* AutosizingTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
