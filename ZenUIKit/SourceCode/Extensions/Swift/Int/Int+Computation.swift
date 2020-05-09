@@ -1,6 +1,6 @@
 import CoreGraphics
 
-public extension Int {
+extension Int {
 	
 	/// Returns receiver value converted to radians.
 	var radians: CGFloat {
