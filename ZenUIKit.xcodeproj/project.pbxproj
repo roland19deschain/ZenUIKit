@@ -37,6 +37,7 @@
 		F7DAC34F244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC34E244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift */; };
 		F7DFE7D2248704DE007F5663 /* UICollectionView+ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DFE7D1248704DE007F5663 /* UICollectionView+ReuseIdentifiers.swift */; };
 		F7DFE7D524870514007F5663 /* UICollectionView+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DFE7D424870514007F5663 /* UICollectionView+CellConfiguration.swift */; };
+		F7DFE7D724870AFE007F5663 /* UICollectionView+SupplementaryViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DFE7D624870AFE007F5663 /* UICollectionView+SupplementaryViewConfiguration.swift */; };
 		F7E63318244508BA004C3F1F /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E63317244508BA004C3F1F /* UIImage+Tint.swift */; };
 		F7E633432445248A004C3F1F /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E633422445248A004C3F1F /* UIImage+Crop.swift */; };
 		F7E720AB2433FCC1004BAF12 /* ZenUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E720A92433FCC1004BAF12 /* ZenUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,6 +78,7 @@
 		F7DAC34E244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderFooterConfiguration.swift"; sourceTree = "<group>"; };
 		F7DFE7D1248704DE007F5663 /* UICollectionView+ReuseIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReuseIdentifiers.swift"; sourceTree = "<group>"; };
 		F7DFE7D424870514007F5663 /* UICollectionView+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+CellConfiguration.swift"; sourceTree = "<group>"; };
+		F7DFE7D624870AFE007F5663 /* UICollectionView+SupplementaryViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+SupplementaryViewConfiguration.swift"; sourceTree = "<group>"; };
 		F7E63317244508BA004C3F1F /* UIImage+Tint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Tint.swift"; sourceTree = "<group>"; };
 		F7E633422445248A004C3F1F /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
 		F7E720A62433FCC1004BAF12 /* ZenUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZenUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +224,7 @@
 			children = (
 				F7DFE7D1248704DE007F5663 /* UICollectionView+ReuseIdentifiers.swift */,
 				F7DFE7D424870514007F5663 /* UICollectionView+CellConfiguration.swift */,
+				F7DFE7D624870AFE007F5663 /* UICollectionView+SupplementaryViewConfiguration.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				F7A92193244FA384000BFE33 /* UIImage+Color.swift in Sources */,
 				F7DAC34D244CFD84003675B0 /* UITableView+CellConfiguration.swift in Sources */,
 				F71AE4C7244916ED00FEE2B4 /* UIBezierPath+StrokeArea.swift in Sources */,
+				F7DFE7D724870AFE007F5663 /* UICollectionView+SupplementaryViewConfiguration.swift in Sources */,
 				F7A9218D244FA169000BFE33 /* UINavigationController+Convenience.swift in Sources */,
 				F7AD673F244D12FF00674B29 /* UIView+Animations.swift in Sources */,
 				F71AE4C52449167400FEE2B4 /* UIBezierPath+Scale.swift in Sources */,

@@ -20,18 +20,18 @@ extension UICollectionView {
 		}
 	}
 	
-	/// Returns a set of header / footer reuse identifiers, registered in this class for reuse.
-	var headerFooterReuseIdentifiersSet: Set<String> {
+	/// Returns a set of supplementary view reuse identifiers, registered in this class for reuse.
+	var supplementaryReuseIdentifiersSet: Set<String> {
 		get {
 			(objc_getAssociatedObject(
 				self,
-				&Keys.headerFooterReuseIdentifiers
+				&Keys.supplementaryReuseIdentifiers
 				) as? Set<String>) ?? Set()
 		}
 		set {
 			objc_setAssociatedObject(
 				self,
-				&Keys.headerFooterReuseIdentifiers,
+				&Keys.supplementaryReuseIdentifiers,
 				newValue,
 				.OBJC_ASSOCIATION_RETAIN_NONATOMIC
 			)
@@ -46,7 +46,7 @@ private extension UICollectionView {
 	
 	enum Keys {
 		static var cellReuseIdentifiers: String = "CellReuseIdentifiers"
-		static var headerFooterReuseIdentifiers: String = "HeaderFooterReuseIdentifiers"
+		static var supplementaryReuseIdentifiers: String = "SupplementaryReuseIdentifiers"
 	}
 	
 }
