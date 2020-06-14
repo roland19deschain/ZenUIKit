@@ -20,12 +20,14 @@ public extension UIScrollView {
 	_false_ to make the transition immediate.
 	*/
 	func scrollToBottom(animated: Bool) {
-		let y: CGFloat = max(contentSize.height - bounds.height, 0)
-		
+		let y: CGFloat = contentSize.height
+			+ contentInset.bottom
+			+ safeAreaInsets.bottom
+			- bounds.height
 		setContentOffset(
 			CGPoint(
 				x: 0,
-				y: y
+				y: max(y, 0)
 			),
 			animated: animated
 		)
