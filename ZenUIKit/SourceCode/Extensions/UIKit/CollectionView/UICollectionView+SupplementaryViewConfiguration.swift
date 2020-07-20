@@ -30,8 +30,8 @@ public extension UICollectionView {
 		}
 		
 		return supplementaryView(
-			at: indexPath,
 			of: kind,
+			at: indexPath,
 			reuseIdentifier: identifier,
 			configurator: configurator
 		)
@@ -48,8 +48,8 @@ public extension UICollectionView {
 	- returns: A reusable supplementary view.
 	*/
 	func configuredNibSupplementaryView<SupplementaryView: UICollectionReusableView>(
-		at indexPath: IndexPath,
 		of kind: String,
+		at indexPath: IndexPath,
 		configurator: (SupplementaryView) -> Void
 	) -> SupplementaryView? {
 		let identifier: String = SupplementaryView.reuseIdentifier
@@ -68,8 +68,8 @@ public extension UICollectionView {
 		}
 		
 		return supplementaryView(
-			at: indexPath,
 			of: kind,
+			at: indexPath,
 			reuseIdentifier: identifier,
 			configurator: configurator
 		)
@@ -82,8 +82,8 @@ public extension UICollectionView {
 private extension UICollectionView {
 	
 	func supplementaryView<SupplementaryView: UICollectionReusableView>(
-		at indexPath: IndexPath,
 		of kind: String,
+		at indexPath: IndexPath,
 		reuseIdentifier: String,
 		configurator: (SupplementaryView) -> Void
 	) -> SupplementaryView {
