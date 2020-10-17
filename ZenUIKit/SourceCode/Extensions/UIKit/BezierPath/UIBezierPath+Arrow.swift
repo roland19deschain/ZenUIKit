@@ -7,7 +7,7 @@ public extension UIBezierPath {
 	- Parameter start: Arrow start point.
 	- Parameter end: Arrow end point.
 	- Parameter lineLength: Length of pointer lines.
-	- Parameter angle: Фrrow angle.
+	- Parameter angle: Arrow angle.
 	*/
 	func addArrow(
 		start: CGPoint,
