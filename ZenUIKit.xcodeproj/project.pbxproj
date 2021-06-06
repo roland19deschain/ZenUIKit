@@ -34,6 +34,7 @@
 		F7A92195244FA3FA000BFE33 /* UIImage+Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A92194244FA3FA000BFE33 /* UIImage+Intersection.swift */; };
 		F7A92197244FA48E000BFE33 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A92196244FA48E000BFE33 /* UIImage+Decompression.swift */; };
 		F7AD673F244D12FF00674B29 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD673E244D12FF00674B29 /* UIView+Animations.swift */; };
+		F7B0921A266D77BE0054DF10 /* UIView+Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B09219266D77BE0054DF10 /* UIView+Mask.swift */; };
 		F7DAC34A244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC349244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift */; };
 		F7DAC34D244CFD84003675B0 /* UITableView+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC34C244CFD84003675B0 /* UITableView+CellConfiguration.swift */; };
 		F7DAC34F244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC34E244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift */; };
@@ -78,6 +79,7 @@
 		F7A92194244FA3FA000BFE33 /* UIImage+Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Intersection.swift"; sourceTree = "<group>"; };
 		F7A92196244FA48E000BFE33 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		F7AD673E244D12FF00674B29 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		F7B09219266D77BE0054DF10 /* UIView+Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Mask.swift"; sourceTree = "<group>"; };
 		F7DAC349244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReuseIdentifiers.swift"; sourceTree = "<group>"; };
 		F7DAC34C244CFD84003675B0 /* UITableView+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellConfiguration.swift"; sourceTree = "<group>"; };
 		F7DAC34E244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderFooterConfiguration.swift"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				F71AE4C82449175200FEE2B4 /* UIView+Initialization.swift */,
+				F7B09219266D77BE0054DF10 /* UIView+Mask.swift */,
 				F71AE4CB244917CF00FEE2B4 /* UIView+Convenience.swift */,
 				F7AD673E244D12FF00674B29 /* UIView+Animations.swift */,
 			);
@@ -454,6 +457,7 @@
 				F71AE4C92449175200FEE2B4 /* UIView+Initialization.swift in Sources */,
 				F71AE4CC244917CF00FEE2B4 /* UIView+Convenience.swift in Sources */,
 				F71AE4C12449141400FEE2B4 /* UIBezierPath+Rotate.swift in Sources */,
+				F7B0921A266D77BE0054DF10 /* UIView+Mask.swift in Sources */,
 				F7A9217C244F9588000BFE33 /* Array+LayoutConstraints.swift in Sources */,
 				F7A92190244FA208000BFE33 /* UILabel+Convenience.swift in Sources */,
 				F7A92195244FA3FA000BFE33 /* UIImage+Intersection.swift in Sources */,
