@@ -67,6 +67,21 @@ public extension UITableView {
 		)
 	}
 	
+	/**
+	Returns an empty reusable table-view cell object and adds it to the table.
+	String representation of _UITableViewCell_ class - used as a reuse identifier.
+	If such an identifier has not yet been registered,
+	this method automatically registers it for use in creating new table cells.
+	- parameter indexPath: An index path identifying a row in the table view.
+	- returns: An empty reusable table-view cell object.
+	*/
+	func configuredEmptyCell(at indexPath: IndexPath) -> UITableViewCell {
+		configuredCell(
+			at: indexPath,
+			configurator: { _ in }
+		)
+	}
+	
 }
 
 // MARK: - Build Cell

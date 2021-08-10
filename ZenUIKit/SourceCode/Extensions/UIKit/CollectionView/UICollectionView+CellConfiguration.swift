@@ -67,6 +67,21 @@ public extension UICollectionView {
 		)
 	}
 	
+	/**
+	Returns an empty reusable collection-view cell object and adds it to the collection.
+	String representation of _UICollectionViewCell_ class - used as a reuse identifier.
+	If such an identifier has not yet been registered,
+	this method automatically registers it for use in creating new collection cells.
+	- parameter indexPath: An index path identifying a row in the collection view.
+	- returns: An empty reusable collection-view cell object.
+	*/
+	func configuredEmptyCell(at indexPath: IndexPath) -> UICollectionViewCell {
+		configuredCell(
+			at: indexPath,
+			configurator: { _ in }
+		)
+	}
+	
 }
 
 // MARK: - Build Cell

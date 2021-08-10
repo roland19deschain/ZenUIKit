@@ -25,6 +25,7 @@ public extension UITableView {
 		}
 		
 		return headerFooter(
+			reuseIdentifier: identifier,
 			configurator: configurator
 		)
 	}
@@ -55,8 +56,20 @@ public extension UITableView {
 		}
 		
 		return headerFooter(
+			reuseIdentifier: identifier,
 			configurator: configurator
 		)
+	}
+	
+	/**
+	Returns an empty reusable table-view header / footer object and adds it to the table.
+	String representation of _UITableViewHeaderFooterView_ class - used as a reuse identifier.
+	If such an identifier has not yet been registered,
+	this method automatically registers it for use in creating new table headers and footers.
+	- returns: An empty reusable table-view header / footer object.
+	*/
+	var configuredEmptyHeaderFooter: UITableViewHeaderFooterView {
+		configuredHeaderFooter(configurator: { _ in })
 	}
 	
 }
@@ -66,11 +79,12 @@ public extension UITableView {
 private extension UITableView {
 	
 	func headerFooter<HeaderFooter: UITableViewHeaderFooterView>(
+		reuseIdentifier: String,
 		configurator: (HeaderFooter) -> Void
 	) -> HeaderFooter {
 		let headerFooter = dequeueReusableHeaderFooterView(
-			withIdentifier: HeaderFooter.reuseIdentifier
-			) as! HeaderFooter
+			withIdentifier: reuseIdentifier
+		) as! HeaderFooter
 		
 		configurator(headerFooter)
 		

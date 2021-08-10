@@ -3,7 +3,7 @@ import UIKit
 public extension UICollectionView {
 	
 	/**
-	Returns a reusable collection-view reusable _SupplementaryView_ object, configured by a specified closure and adds it to the collection.
+	Returns a reusable collection-view _SupplementaryView_ object, configured by a specified closure and adds it to the collection.
 	String representation of _SupplementaryView_ class - used as a reuse identifier.
 	If such an identifier has not yet been registered,
 	this method automatically registers it for use in creating new collection supplementary views.
@@ -38,7 +38,7 @@ public extension UICollectionView {
 	}
 	
 	/**
-	Returns a reusable collection-view reusable _SupplementaryView_ object, configured by a specified closure and adds it to the collection.
+	Returns a reusable collection-view _SupplementaryView_ object, configured by a specified closure and adds it to the collection.
 	String representation of _SupplementaryView_ class - used as a _Nib_ name and reuse identifier.
 	If such an identifier has not yet been registered,
 	this method automatically registers it for use in creating new collection supplementary views.
@@ -72,6 +72,39 @@ public extension UICollectionView {
 			at: indexPath,
 			reuseIdentifier: identifier,
 			configurator: configurator
+		)
+	}
+	
+	/**
+	Returns an empty reusable collection-view _UICollectionReusableView_ object and adds it to the collection.
+	String representation of _UICollectionReusableView_ class - used as a reuse identifier.
+	If such an identifier has not yet been registered,
+	this method automatically registers it for use in creating new collection supplementary views.
+	- parameter indexPath: The index path specifying the location of the supplementary view in the collection view.
+	- parameter kind: The kind of supplementary view to create. This value is defined by the layout object. This parameter must not be nil.
+	- returns: An empty reusable supplementary view.
+	*/
+	func configuredEmptySupplementaryView(
+		at indexPath: IndexPath,
+		of kind: String
+	) -> UICollectionReusableView {
+		let identifier: String = UICollectionReusableView.reuseIdentifier
+		
+		if !supplementaryReuseIdentifiersSet.contains(identifier) {
+			supplementaryReuseIdentifiersSet.insert(identifier)
+			
+			register(
+				UICollectionReusableView.self,
+				forSupplementaryViewOfKind: kind,
+				withReuseIdentifier: identifier
+			)
+		}
+		
+		return supplementaryView(
+			of: kind,
+			at: indexPath,
+			reuseIdentifier: identifier,
+			configurator: { _ in }
 		)
 	}
 	
