@@ -103,6 +103,12 @@ private extension AutosizingTextView {
 		)
 	}
 	
+}
+
+// MARK: - Actions
+
+private extension AutosizingTextView {
+	
 	@objc func handleText(change notification: Notification) {
 		updateScrollAvailability()
 	}
