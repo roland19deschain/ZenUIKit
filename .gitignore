@@ -35,7 +35,9 @@ Carthage/Build
 Pods/
 
 # Swift Package Manager
-.build/
+/.build
+/Packages
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 
 # fastlane
 fastlane/report.xml
