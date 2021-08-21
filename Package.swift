@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
 	name: "ZenUIKit",
-	platforms: [.iOS(.v12_1)],
+	platforms: [.iOS(.v12)],
 	products: [
 		.library(
 			name: "ZenUIKit",
