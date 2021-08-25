@@ -19,5 +19,6 @@ let package = Package(
 			dependencies: [],
 			path: "ZenUIKit/SourceCode/"
 		)
-	]
+	],
+	swiftLanguageVersions: [.v5]
 )
