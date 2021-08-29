@@ -8,46 +8,42 @@ public extension UIImage {
 	- returns: The image based on the receiver, rotated by a specified angle
 	*/
 	func rotated(to radians: CGFloat) -> UIImage {
-		guard let cgImage = cgImage else {
-			return self
-		}
+		let rotationTransform = CGAffineTransform(rotationAngle: radians)
+		var newSize = CGRect(
+			origin: .zero,
+			size: size
+		).applying(rotationTransform).size
 		
-		let newSide: CGFloat = max(size.width, size.height)
-		let newSize: CGSize = CGSize(
-			width: newSide,
-			height: newSide
-		)
-		
+		// Trim off the extremely small float value
+		// to prevent core graphics from rounding it up.
+		newSize.width = floor(newSize.width)
+		newSize.height = floor(newSize.height)
+
 		UIGraphicsBeginImageContextWithOptions(
 			newSize,
 			false,
 			scale
 		)
+		
 		defer {
 			UIGraphicsEndImageContext()
 		}
-		
 		guard let context = UIGraphicsGetCurrentContext() else {
 			return self
 		}
-		
 		context.translateBy(
-			x: newSide / 2,
-			y: newSide / 2
+			x: newSize.width / 2,
+			y: newSize.height / 2
 		)
 		context.rotate(by: radians)
 		
-		let rect = CGRect(
-			x: -(size.width / 2),
-			y: -(size.height / 2),
+		let drawRect = CGRect(
+			x: -size.width / 2,
+			y: -size.height / 2,
 			width: size.width,
 			height: size.height
 		)
-		
-		context.draw(
-			cgImage,
-			in: rect
-		)
+		draw(in: drawRect)
 		
 		return UIGraphicsGetImageFromCurrentImageContext() ?? self
 	}
