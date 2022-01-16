@@ -39,6 +39,18 @@
 		F7AD673F244D12FF00674B29 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD673E244D12FF00674B29 /* UIView+Animations.swift */; };
 		F7B0921A266D77BE0054DF10 /* UIView+Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B09219266D77BE0054DF10 /* UIView+Mask.swift */; };
 		F7B12846274AD5F900F07646 /* UIViewController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B12845274AD5F900F07646 /* UIViewController+Convenience.swift */; };
+		F7BCAFDF2794A222002ACE72 /* CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFDE2794A222002ACE72 /* CombineCompatible.swift */; };
+		F7BCAFE22794A262002ACE72 /* GestureSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFE12794A262002ACE72 /* GestureSubscription.swift */; };
+		F7BCAFE42794A26A002ACE72 /* GesturePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFE32794A26A002ACE72 /* GesturePublisher.swift */; };
+		F7BCAFE62794A271002ACE72 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFE52794A271002ACE72 /* Gesture.swift */; };
+		F7BCAFE82794A27C002ACE72 /* GestureRecognizerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFE72794A27C002ACE72 /* GestureRecognizerFactory.swift */; };
+		F7BCAFEA2794A285002ACE72 /* UIView+CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFE92794A285002ACE72 /* UIView+CombineCompatible.swift */; };
+		F7BCAFEE2794BB91002ACE72 /* ControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFED2794BB91002ACE72 /* ControlSubscription.swift */; };
+		F7BCAFF12794BB9E002ACE72 /* ControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFF02794BB9E002ACE72 /* ControlPublisher.swift */; };
+		F7BCAFF32794BBAB002ACE72 /* UIControl+CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFF22794BBAB002ACE72 /* UIControl+CombineCompatible.swift */; };
+		F7BCAFF92794BC86002ACE72 /* BarButtonItemSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFF82794BC86002ACE72 /* BarButtonItemSubscription.swift */; };
+		F7BCAFFC2794BCA2002ACE72 /* BarButtonItemPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFFB2794BCA2002ACE72 /* BarButtonItemPublisher.swift */; };
+		F7BCAFFE2794BCAB002ACE72 /* UIBarButtonItem+CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCAFFD2794BCAB002ACE72 /* UIBarButtonItem+CombineCompatible.swift */; };
 		F7DAC34A244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC349244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift */; };
 		F7DAC34D244CFD84003675B0 /* UITableView+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC34C244CFD84003675B0 /* UITableView+CellConfiguration.swift */; };
 		F7DAC34F244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC34E244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift */; };
@@ -88,6 +100,18 @@
 		F7AD673E244D12FF00674B29 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		F7B09219266D77BE0054DF10 /* UIView+Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Mask.swift"; sourceTree = "<group>"; };
 		F7B12845274AD5F900F07646 /* UIViewController+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Convenience.swift"; sourceTree = "<group>"; };
+		F7BCAFDE2794A222002ACE72 /* CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCompatible.swift; sourceTree = "<group>"; };
+		F7BCAFE12794A262002ACE72 /* GestureSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureSubscription.swift; sourceTree = "<group>"; };
+		F7BCAFE32794A26A002ACE72 /* GesturePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturePublisher.swift; sourceTree = "<group>"; };
+		F7BCAFE52794A271002ACE72 /* Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		F7BCAFE72794A27C002ACE72 /* GestureRecognizerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizerFactory.swift; sourceTree = "<group>"; };
+		F7BCAFE92794A285002ACE72 /* UIView+CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CombineCompatible.swift"; sourceTree = "<group>"; };
+		F7BCAFED2794BB91002ACE72 /* ControlSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlSubscription.swift; sourceTree = "<group>"; };
+		F7BCAFF02794BB9E002ACE72 /* ControlPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPublisher.swift; sourceTree = "<group>"; };
+		F7BCAFF22794BBAB002ACE72 /* UIControl+CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+CombineCompatible.swift"; sourceTree = "<group>"; };
+		F7BCAFF82794BC86002ACE72 /* BarButtonItemSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemSubscription.swift; sourceTree = "<group>"; };
+		F7BCAFFB2794BCA2002ACE72 /* BarButtonItemPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemPublisher.swift; sourceTree = "<group>"; };
+		F7BCAFFD2794BCAB002ACE72 /* UIBarButtonItem+CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+CombineCompatible.swift"; sourceTree = "<group>"; };
 		F7DAC349244CFAB5003675B0 /* UITableView+ReuseIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReuseIdentifiers.swift"; sourceTree = "<group>"; };
 		F7DAC34C244CFD84003675B0 /* UITableView+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellConfiguration.swift"; sourceTree = "<group>"; };
 		F7DAC34E244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderFooterConfiguration.swift"; sourceTree = "<group>"; };
@@ -262,6 +286,105 @@
 			path = Label;
 			sourceTree = "<group>";
 		};
+		F7BCAFE02794A226002ACE72 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFEC2794A290002ACE72 /* Protocols */,
+				F7BCAFEB2794A289002ACE72 /* View */,
+				F7BCAFEF2794BB94002ACE72 /* Control */,
+				F7BCAFFA2794BC96002ACE72 /* BarButtonItem */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		F7BCAFEB2794A289002ACE72 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFF52794BC4D002ACE72 /* Protocols */,
+				F7BCAFF42794BC46002ACE72 /* Tools */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7BCAFEC2794A290002ACE72 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFDE2794A222002ACE72 /* CombineCompatible.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F7BCAFEF2794BB94002ACE72 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFF62794BC6A002ACE72 /* Protocols */,
+				F7BCAFF72794BC6E002ACE72 /* Tools */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		F7BCAFF42794BC46002ACE72 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFE12794A262002ACE72 /* GestureSubscription.swift */,
+				F7BCAFE32794A26A002ACE72 /* GesturePublisher.swift */,
+				F7BCAFE52794A271002ACE72 /* Gesture.swift */,
+				F7BCAFE72794A27C002ACE72 /* GestureRecognizerFactory.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F7BCAFF52794BC4D002ACE72 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFE92794A285002ACE72 /* UIView+CombineCompatible.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F7BCAFF62794BC6A002ACE72 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFF22794BBAB002ACE72 /* UIControl+CombineCompatible.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F7BCAFF72794BC6E002ACE72 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFED2794BB91002ACE72 /* ControlSubscription.swift */,
+				F7BCAFF02794BB9E002ACE72 /* ControlPublisher.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F7BCAFFA2794BC96002ACE72 /* BarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFFF2794BCB0002ACE72 /* Protocols */,
+				F7BCB0002794BCB8002ACE72 /* Tools */,
+			);
+			path = BarButtonItem;
+			sourceTree = "<group>";
+		};
+		F7BCAFFF2794BCB0002ACE72 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFFD2794BCAB002ACE72 /* UIBarButtonItem+CombineCompatible.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F7BCB0002794BCB8002ACE72 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCAFF82794BC86002ACE72 /* BarButtonItemSubscription.swift */,
+				F7BCAFFB2794BCA2002ACE72 /* BarButtonItemPublisher.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		F7DAC34B244CFB0D003675B0 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				F7A9218B244FA153000BFE33 /* UIKit */,
+				F7BCAFE02794A226002ACE72 /* Combine */,
 				F7A92182244F9914000BFE33 /* Swift */,
 			);
 			path = Extensions;
@@ -475,9 +599,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7BCAFE62794A271002ACE72 /* Gesture.swift in Sources */,
 				F71AE4C32449146100FEE2B4 /* UIBezierPath+Inverse.swift in Sources */,
 				F71AE4CE2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift in Sources */,
 				F71AE4BC2449131B00FEE2B4 /* UIBezierPath+ExcludeOverlap.swift in Sources */,
+				F7BCAFE82794A27C002ACE72 /* GestureRecognizerFactory.swift in Sources */,
+				F7BCAFFC2794BCA2002ACE72 /* BarButtonItemPublisher.swift in Sources */,
+				F7BCAFF92794BC86002ACE72 /* BarButtonItemSubscription.swift in Sources */,
 				F7E63318244508BA004C3F1F /* UIImage+Tint.swift in Sources */,
 				F7A92189244F9E7B000BFE33 /* UIViewController+AddChild.swift in Sources */,
 				F77941F72450E87400324E40 /* UIColor+Initialization.swift in Sources */,
@@ -486,17 +614,22 @@
 				F733B1AC2475F4EC0095DFDC /* UITableView+Selection.swift in Sources */,
 				F7DFE7D524870514007F5663 /* UICollectionView+CellConfiguration.swift in Sources */,
 				F71AE4BF244913EA00FEE2B4 /* UIBezierPath+Intersection.swift in Sources */,
+				F7BCAFF32794BBAB002ACE72 /* UIControl+CombineCompatible.swift in Sources */,
 				F7B12846274AD5F900F07646 /* UIViewController+Convenience.swift in Sources */,
 				F7E0F1A3266436AD00D85208 /* UIDevice+Convenience.swift in Sources */,
 				F7680C6F26C4705500D418B0 /* AutosizingCollectionView.swift in Sources */,
+				F7BCAFE42794A26A002ACE72 /* GesturePublisher.swift in Sources */,
 				F7A92193244FA384000BFE33 /* UIImage+Color.swift in Sources */,
+				F7BCAFEE2794BB91002ACE72 /* ControlSubscription.swift in Sources */,
 				F7DAC34D244CFD84003675B0 /* UITableView+CellConfiguration.swift in Sources */,
 				F76AEC3726CF21E10095F816 /* UIImageView+Animations.swift in Sources */,
+				F7BCAFDF2794A222002ACE72 /* CombineCompatible.swift in Sources */,
 				F7014D51253382BB00E8AEDD /* UIBezierPath+Arrow.swift in Sources */,
 				F71AE4C7244916ED00FEE2B4 /* UIBezierPath+StrokeArea.swift in Sources */,
 				F7DFE7D724870AFE007F5663 /* UICollectionView+SupplementaryViewConfiguration.swift in Sources */,
 				F7A9218D244FA169000BFE33 /* UINavigationController+Convenience.swift in Sources */,
 				F7AD673F244D12FF00674B29 /* UIView+Animations.swift in Sources */,
+				F7BCAFE22794A262002ACE72 /* GestureSubscription.swift in Sources */,
 				F71AE4C52449167400FEE2B4 /* UIBezierPath+Scale.swift in Sources */,
 				F7A92197244FA48E000BFE33 /* UIImage+Decompression.swift in Sources */,
 				F71AE4BA2449116400FEE2B4 /* UIColor+Introspection.swift in Sources */,
@@ -511,6 +644,7 @@
 				F7E720B32433FE06004BAF12 /* UIColor+Random.swift in Sources */,
 				F7A92181244F9910000BFE33 /* Int+Computation.swift in Sources */,
 				F7DAC34F244D002D003675B0 /* UITableView+HeaderFooterConfiguration.swift in Sources */,
+				F7BCAFFE2794BCAB002ACE72 /* UIBarButtonItem+CombineCompatible.swift in Sources */,
 				F7A9217F244F9653000BFE33 /* UIImage+Rotate.swift in Sources */,
 				F77941F42450E7EA00324E40 /* String+Convenience.swift in Sources */,
 				F7E633432445248A004C3F1F /* UIImage+Crop.swift in Sources */,
@@ -519,6 +653,8 @@
 				F7A92187244F9B01000BFE33 /* UIImage+Initialization.swift in Sources */,
 				F7DFE7D2248704DE007F5663 /* UICollectionView+ReuseIdentifiers.swift in Sources */,
 				F7F68B0024622ABE00311468 /* AutosizingTextView.swift in Sources */,
+				F7BCAFF12794BB9E002ACE72 /* ControlPublisher.swift in Sources */,
+				F7BCAFEA2794A285002ACE72 /* UIView+CombineCompatible.swift in Sources */,
 				F7014DC0253B9D2100E8AEDD /* UIBezierPath+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
