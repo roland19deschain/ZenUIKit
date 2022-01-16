@@ -16,15 +16,20 @@ public extension UINavigationController {
 		animated: Bool,
 		completion: @escaping () -> Void
 	) {
-		CATransaction.begin()
-		CATransaction.setCompletionBlock(completion)
-		
 		pushViewController(
 			viewController,
 			animated: animated
 		)
 		
-		CATransaction.commit()
+		guard animated, let coordinator = transitionCoordinator else {
+			DispatchQueue.main.async {
+				completion()
+			}
+			return
+		}
+		coordinator.animate(alongsideTransition: nil) { _ in
+			completion()
+		}
 	}
 	
 }
