@@ -5,12 +5,10 @@ import Combine
 
 // MARK: - CombineCompatible
 
-@available(iOS 13.0, *)
 extension UIView: CombineCompatible {}
 
 // MARK: - All Gestures Publisher
 
-@available(iOS 13.0, *)
 public extension CombineCompatible where Self: UIView {
 	
 	var tapGesturePublisher: AnyPublisher<UITapGestureRecognizer, Never> {
@@ -41,7 +39,6 @@ public extension CombineCompatible where Self: UIView {
 
 // MARK: - Publisher for Gesture
 
-@available(iOS 13.0, *)
 private extension CombineCompatible where Self: UIView {
 	
 	func publisher<T: UIGestureRecognizer>(for gesture: Gesture) -> AnyPublisher<T, Never> {

@@ -1,7 +1,6 @@
 import UIKit
 import Combine
 
-@available(iOS 13.0, *)
 final class ControlSubscription<
 	SubscriberType: Subscriber,
 	Control: UIControl

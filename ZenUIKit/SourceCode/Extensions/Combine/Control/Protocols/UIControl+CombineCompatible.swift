@@ -5,7 +5,6 @@ import Combine
 
 // MARK: - Publishers
 
-@available(iOS 13.0, *)
 public extension CombineCompatible where Self: UIControl {
 	
 	var tapEventPublisher: AnyPublisher<Self, Never> {

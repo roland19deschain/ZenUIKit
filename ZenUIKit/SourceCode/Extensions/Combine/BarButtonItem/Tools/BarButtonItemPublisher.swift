@@ -1,7 +1,6 @@
 import UIKit
 import Combine
 
-@available(iOS 13.0, *)
 struct BarButtonItemPublisher<Item: UIBarButtonItem>: Combine.Publisher {
 	
 	// MARK: - Stored Properties

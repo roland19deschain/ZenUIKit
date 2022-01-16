@@ -11,6 +11,6 @@ ZenUIKit is a collection of convenient and concise extensions, views and functio
   s.author           = { 'Alexey Roik' => 'roland19deschain@gmail.com' }
   s.source           = { :git => 'https://github.com/roland19deschain/ZenUIKit.git', :tag => s.version }
   s.requires_arc     = true
-  s.ios.deployment_target = '12.1'
+  s.ios.deployment_target = '13.0'
   s.source_files     = 'ZenUIKit/**/*{swift}'
 end

@@ -1,7 +1,6 @@
 import UIKit
 import Combine
 
-@available(iOS 13.0, *)
 struct ControlPublisher<Control: UIControl>: Publisher {
 	
 	// MARK: - Stored Properties
