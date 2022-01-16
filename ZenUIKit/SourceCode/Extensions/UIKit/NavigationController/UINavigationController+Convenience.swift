@@ -12,7 +12,7 @@ public extension UINavigationController {
 	- parameter completion: The closure to be executed at the end of the animation.
 	*/
 	func push(
-		_ viewController: UIViewController,
+		viewController: UIViewController,
 		animated: Bool,
 		completion: @escaping () -> Void
 	) {
