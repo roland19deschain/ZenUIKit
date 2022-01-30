@@ -21,6 +21,7 @@
 		F71AE4CE2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AE4CD2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift */; };
 		F733B1AC2475F4EC0095DFDC /* UITableView+Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733B1AB2475F4EC0095DFDC /* UITableView+Selection.swift */; };
 		F751280426D6D50200ED4FA9 /* UIEdgeInsets+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F751280326D6D50200ED4FA9 /* UIEdgeInsets+Convenience.swift */; };
+		F767690427A6FBA10034679C /* UIStackView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F767690327A6FBA10034679C /* UIStackView+Convenience.swift */; };
 		F7680C6F26C4705500D418B0 /* AutosizingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7680C6E26C4705500D418B0 /* AutosizingCollectionView.swift */; };
 		F76AEC3726CF21E10095F816 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AEC3626CF21E10095F816 /* UIImageView+Animations.swift */; };
 		F77941F42450E7EA00324E40 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77941F32450E7EA00324E40 /* String+Convenience.swift */; };
@@ -82,6 +83,7 @@
 		F71AE4CD2449188E00FEE2B4 /* UIScrollView+ScrollTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ScrollTo.swift"; sourceTree = "<group>"; };
 		F733B1AB2475F4EC0095DFDC /* UITableView+Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Selection.swift"; sourceTree = "<group>"; };
 		F751280326D6D50200ED4FA9 /* UIEdgeInsets+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Convenience.swift"; sourceTree = "<group>"; };
+		F767690327A6FBA10034679C /* UIStackView+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Convenience.swift"; sourceTree = "<group>"; };
 		F7680C6E26C4705500D418B0 /* AutosizingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosizingCollectionView.swift; sourceTree = "<group>"; };
 		F76AEC3626CF21E10095F816 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 		F77941F32450E7EA00324E40 /* String+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Convenience.swift"; sourceTree = "<group>"; };
@@ -183,6 +185,14 @@
 			path = EdgeInsets;
 			sourceTree = "<group>";
 		};
+		F767690527A6FBA40034679C /* StackView */ = {
+			isa = PBXGroup;
+			children = (
+				F767690327A6FBA10034679C /* UIStackView+Convenience.swift */,
+			);
+			path = StackView;
+			sourceTree = "<group>";
+		};
 		F7680C7026C4727B00D418B0 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +270,7 @@
 				F76AEC3826CF21E70095F816 /* ImageView */,
 				F7A92191244FA211000BFE33 /* Label */,
 				F71AE4CF2449189700FEE2B4 /* ScrollView */,
+				F767690527A6FBA40034679C /* StackView */,
 				F7DAC34B244CFB0D003675B0 /* TableView */,
 				F7DFE7D3248704FB007F5663 /* CollectionView */,
 				F7A9218A244F9E82000BFE33 /* ViewController */,
@@ -610,6 +621,7 @@
 				F7A92189244F9E7B000BFE33 /* UIViewController+AddChild.swift in Sources */,
 				F77941F72450E87400324E40 /* UIColor+Initialization.swift in Sources */,
 				F7F68B0424622AE400311468 /* AutosizingTextViewDelegate.swift in Sources */,
+				F767690427A6FBA10034679C /* UIStackView+Convenience.swift in Sources */,
 				F7A92185244F9A88000BFE33 /* UIImage+Scale.swift in Sources */,
 				F733B1AC2475F4EC0095DFDC /* UITableView+Selection.swift in Sources */,
 				F7DFE7D524870514007F5663 /* UICollectionView+CellConfiguration.swift in Sources */,
