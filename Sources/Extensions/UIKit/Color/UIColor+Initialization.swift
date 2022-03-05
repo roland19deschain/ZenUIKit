@@ -14,7 +14,7 @@ public extension UIColor {
 		hex string: String,
 		alpha: CGFloat = 1
 	) {
-		guard let hex = string.hex else {
+		guard let hex: Int = string.hex else {
 			return nil
 		}
 		self.init(
