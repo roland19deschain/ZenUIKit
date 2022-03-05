@@ -9,7 +9,7 @@ ZenUIKit is a collection of convenient and concise extensions, views and functio
   spec.homepage         = 'https://github.com/roland19deschain/ZenUIKit'
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'Alexey Roik' => 'roland19deschain@gmail.com' }
-  spec.source           = { :git => 'https://github.com/roland19deschain/ZenUIKit.git', :tag => s.version }
+  spec.source           = { :git => 'https://github.com/roland19deschain/ZenUIKit.git', :tag => spec.version }
   spec.requires_arc     = true
   spec.ios.deployment_target = '13.0'
   spec.source_files     = 'Sources/**/*{swift}'
