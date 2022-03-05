@@ -1,4 +1,5 @@
 import UIKit
+import ZenSwift
 
 public extension UIImage {
 	
@@ -24,7 +25,6 @@ public extension UIImage {
 			false,
 			scale
 		)
-		
 		defer {
 			UIGraphicsEndImageContext()
 		}
@@ -59,15 +59,12 @@ public extension UIImage {
 			false,
 			scale
 		)
-		
 		defer {
 			UIGraphicsEndImageContext()
 		}
-		
 		guard let context = UIGraphicsGetCurrentContext() else {
 			return self
 		}
-		
 		switch orientation {
 		case .left:		context.rotate(by: -90.radians)
 		case .right:	context.rotate(by: 90.radians)

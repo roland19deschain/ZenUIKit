@@ -1,5 +1,4 @@
 // swift-tools-version:5.5
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
@@ -13,11 +12,15 @@ let package = Package(
 			targets: ["ZenUIKit"]
 		)
 	],
-	dependencies: [],
+	dependencies: [
+		.package(url: "https://github.com/roland19deschain/ZenSwift.git", from: "2.0.0")
+	],
 	targets: [
 		.target(
 			name: "ZenUIKit",
-			dependencies: [],
+			dependencies: [
+				.product(name: "ZenSwift", package: "zenswift")
+			],
 			path: "Sources/"
 		),
 		.testTarget(
