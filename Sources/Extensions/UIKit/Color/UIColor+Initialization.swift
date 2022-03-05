@@ -1,4 +1,5 @@
 import UIKit
+import ZenSwift
 
 public extension UIColor {
 	
@@ -16,7 +17,6 @@ public extension UIColor {
 		guard let hex = string.hex else {
 			return nil
 		}
-		
 		self.init(
 			hex: hex,
 			alpha: alpha
