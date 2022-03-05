@@ -13,4 +13,5 @@ ZenUIKit is a collection of convenient and concise extensions, views and functio
   spec.requires_arc     = true
   spec.ios.deployment_target = '13.0'
   spec.source_files     = 'Sources/**/*{swift}'
+  spec.dependency 'ZenSwift'
 end
