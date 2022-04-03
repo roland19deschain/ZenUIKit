@@ -13,13 +13,15 @@ let package = Package(
 		)
 	],
 	dependencies: [
-		.package(url: "https://github.com/roland19deschain/ZenSwift.git", from: "2.0.1")
+		.package(url: "https://github.com/roland19deschain/ZenSwift", from: "2.0.1"),
+		.package(url: "https://github.com/roland19deschain/ZenCoreGraphics", from: "2.0.0")
 	],
 	targets: [
 		.target(
 			name: "ZenUIKit",
 			dependencies: [
-				.product(name: "ZenSwift", package: "zenswift")
+				.product(name: "ZenSwift", package: "zenswift"),
+				.product(name: "ZenCoreGraphics", package: "zencoregraphics")
 			],
 			path: "Sources/"
 		),

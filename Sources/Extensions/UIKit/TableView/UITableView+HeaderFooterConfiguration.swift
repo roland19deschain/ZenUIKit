@@ -34,7 +34,7 @@ public extension UITableView {
 	Returns a reusable table-view header / footer object, configured by a specified closure and adds it to the table.
 	String representation of _Header / Footer_ class - used as a _Nib_ name and reuse identifier.
 	If such an identifier has not yet been registered,
-	this method automatically registers it for use in creating new table  headers and footers.
+	this method automatically registers it for use in creating new table headers and footers.
 	- parameter configurator: The block for configure the header / footer.
 	- returns: A reusable table-view header / footer object.
 	*/

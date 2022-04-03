@@ -43,7 +43,7 @@ public extension UIColor {
 	}
 	
 	/// Returns the color as string with hexadecimal number.
-	var hexString: String  {
+	var hexString: String {
 		String(format: "%06x", hex).uppercased()
 	}
 	

@@ -36,8 +36,8 @@ public extension UIColor {
 	) {
 		self.init(
 			red: CGFloat((hex & 0xFF0000) >> 16) / CGFloat(0xFF),
-			green: CGFloat((hex & 0x00FF00) >>  8) / CGFloat(0xFF),
-			blue:  CGFloat((hex & 0x0000FF) >>  0) / CGFloat(0xFF),
+			green: CGFloat((hex & 0x00FF00) >> 8) / CGFloat(0xFF),
+			blue: CGFloat((hex & 0x0000FF) >> 0) / CGFloat(0xFF),
 			alpha: alpha
 		)
 	}
