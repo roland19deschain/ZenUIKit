@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'ZenUIKit'
-  spec.version          = '2.0.2'
+  spec.version          = '2.0.3'
   spec.swift_version    = '5.0'
   spec.summary          = 'ZenUIKit is a collection of views, extensions and functions for UIKit framework.'
   spec.description      = <<-DESC
@@ -14,4 +14,5 @@ ZenUIKit is a collection of convenient and concise extensions, views and functio
   spec.ios.deployment_target = '13.0'
   spec.source_files     = 'Sources/**/*{swift}'
   spec.dependency 'ZenSwift'
+  spec.dependency 'ZenCoreGraphics'
 end
