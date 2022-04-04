@@ -10,7 +10,7 @@ public class TransitionAnimator: NSObject {
 	
 	// MARK: - Life Cycle
 	
-	init(
+	public init(
 		type: TransitionType = Default.type,
 		duration: TimeInterval = Default.duration,
 		dampingRatio: CGFloat = Default.dampingRatio
