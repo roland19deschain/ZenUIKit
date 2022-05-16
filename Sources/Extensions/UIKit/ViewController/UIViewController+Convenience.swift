@@ -1,16 +1,16 @@
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
 	
 	/// Returns the highest view controller in the receiver's hierarchy.
-	var theHighestViewController: UIViewController? {
+	var topViewController: UIViewController? {
 		switch self {
 		case let navigationController as UINavigationController:
-			return navigationController.visibleViewController?.theHighestViewController
+			return navigationController.visibleViewController?.topViewController
 		case let tabBarController as UITabBarController:
-			return tabBarController.selectedViewController?.theHighestViewController
+			return tabBarController.selectedViewController?.topViewController
 		default:
-			return presentedViewController?.theHighestViewController ?? self
+			return presentedViewController?.topViewController ?? self
 		}
 	}
 	
