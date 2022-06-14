@@ -31,4 +31,14 @@ public extension UIDevice {
 		current.userInterfaceIdiom == .carPlay
 	}
 	
+	/// A Boolean value that indicates whether the device is in a portrait orientation.
+	static var isPortrait: Bool {
+		current.orientation.isPortrait
+	}
+	
+	/// A Boolean value that indicates whether the device is in a landscape orientation.
+	static var isLandscape: Bool {
+		current.orientation.isLandscape
+	}
+	
 }
