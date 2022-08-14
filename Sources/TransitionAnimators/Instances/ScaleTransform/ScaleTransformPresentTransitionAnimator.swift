@@ -1,8 +1,8 @@
 import UIKit
 
-public final class PresentRushAnimator: TransitionAnimator {
+public final class ScaleTransformPresentTransitionAnimator: BounceTransitionAnimator {
 	
-	// MARK: - Stored Properties
+	// MARK: - Stored Properties - References
 	
 	private let transitionStartingPointProvider: TransitionStartingPointProviderProtocol
 	
@@ -10,9 +10,9 @@ public final class PresentRushAnimator: TransitionAnimator {
 	
 	public init(
 		transitionStartingPointProvider: TransitionStartingPointProviderProtocol,
-		type: TransitionType = Default.type,
-		duration: TimeInterval = Default.duration,
-		dampingRatio: CGFloat = Default.dampingRatio
+		type: TransitionType = .navigation,
+		duration: TimeInterval = 0.5,
+		dampingRatio: CGFloat = 0.75
 	) {
 		self.transitionStartingPointProvider = transitionStartingPointProvider
 		

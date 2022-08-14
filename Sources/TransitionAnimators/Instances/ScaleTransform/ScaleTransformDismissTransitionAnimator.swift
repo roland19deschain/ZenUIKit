@@ -1,7 +1,7 @@
 import UIKit
 import ZenCoreGraphics
 
-public final class DismissRushAnimator: TransitionAnimator {
+public final class ScaleTransformDismissTransitionAnimator: BounceTransitionAnimator {
 	
 	// MARK: - Stored Properties
 	
@@ -11,9 +11,9 @@ public final class DismissRushAnimator: TransitionAnimator {
 	
 	public init(
 		transitionEndPointProvider: TransitionEndPointProviderProtocol,
-		type: TransitionType = Default.type,
-		duration: TimeInterval = Default.duration,
-		dampingRatio: CGFloat = Default.dampingRatio
+		type: TransitionType = .navigation,
+		duration: TimeInterval = 0.5,
+		dampingRatio: CGFloat = 0.75
 	) {
 		self.transitionEndPointProvider = transitionEndPointProvider
 		

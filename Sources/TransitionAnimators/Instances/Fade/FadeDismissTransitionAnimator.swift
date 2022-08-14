@@ -1,6 +1,6 @@
 import UIKit
 
-public final class DismissFadeAnimator: TransitionAnimator {
+public final class FadeDismissTransitionAnimator: TransitionAnimator {
 	
 	public override func animateTransition(
 		using transitionContext: UIViewControllerContextTransitioning
@@ -21,7 +21,7 @@ public final class DismissFadeAnimator: TransitionAnimator {
 		
 		let animator = UIViewPropertyAnimator(
 			duration: duration,
-			dampingRatio: dampingRatio
+			curve: .easeInOut
 		) {
 			fromViewController.view.alpha = 0
 		}
