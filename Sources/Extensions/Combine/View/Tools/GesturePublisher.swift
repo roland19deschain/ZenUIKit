@@ -7,12 +7,18 @@ struct GesturePublisher: Publisher {
 	
 	private let view: UIView
 	private let gesture: Gesture
+	private let delegate: UIGestureRecognizerDelegate?
 	
 	// MARK: - Life Cycle
 	
-	init(view: UIView, gesture: Gesture) {
+	init(
+		view: UIView,
+		gesture: Gesture,
+		delegate: UIGestureRecognizerDelegate? = nil
+	) {
 		self.view = view
 		self.gesture = gesture
+		self.delegate = delegate
 	}
 	
 	// MARK: - Publisher
@@ -27,7 +33,8 @@ struct GesturePublisher: Publisher {
 		let subscription = GestureSubscription(
 			subscriber: subscriber,
 			view: view,
-			gesture: gesture
+			gesture: gesture,
+			delegate: delegate
 		)
 		subscriber.receive(subscription: subscription)
 	}

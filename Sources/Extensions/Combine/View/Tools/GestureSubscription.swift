@@ -15,13 +15,15 @@ final class GestureSubscription<SubscriberType: Subscriber>: Subscription where
 	init(
 		subscriber: SubscriberType,
 		view: UIView,
-		gesture: Gesture
+		gesture: Gesture,
+		delegate: UIGestureRecognizerDelegate? = nil
 	) {
 		self.subscriber = subscriber
 		
 		gestureRecognizer = GestureRecognizerFactory().gestureRecognizer(
 			for: gesture
 		)
+		gestureRecognizer.delegate = delegate
 		gestureRecognizer.addTarget(
 			self,
 			action: #selector(eventHandler)
