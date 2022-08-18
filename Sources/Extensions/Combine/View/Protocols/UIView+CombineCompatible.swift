@@ -30,7 +30,7 @@ public extension CombineCompatible where Self: UIView {
 	
 	func swipeGesture(
 		delegate: UIGestureRecognizerDelegate
-	) -> AnyPublisher<UITapGestureRecognizer, Never> {
+	) -> AnyPublisher<UISwipeGestureRecognizer, Never> {
 		publisher(
 			for: .swipe,
 			delegate: delegate
@@ -43,7 +43,7 @@ public extension CombineCompatible where Self: UIView {
 	
 	func longPressGesture(
 		delegate: UIGestureRecognizerDelegate
-	) -> AnyPublisher<UITapGestureRecognizer, Never> {
+	) -> AnyPublisher<UILongPressGestureRecognizer, Never> {
 		publisher(
 			for: .longPress,
 			delegate: delegate
@@ -56,7 +56,7 @@ public extension CombineCompatible where Self: UIView {
 	
 	func panGesture(
 		delegate: UIGestureRecognizerDelegate
-	) -> AnyPublisher<UITapGestureRecognizer, Never> {
+	) -> AnyPublisher<UIPanGestureRecognizer, Never> {
 		publisher(
 			for: .pan,
 			delegate: delegate
@@ -69,7 +69,7 @@ public extension CombineCompatible where Self: UIView {
 	
 	func pinchGesture(
 		delegate: UIGestureRecognizerDelegate
-	) -> AnyPublisher<UITapGestureRecognizer, Never> {
+	) -> AnyPublisher<UIPinchGestureRecognizer, Never> {
 		publisher(
 			for: .pinch,
 			delegate: delegate
@@ -82,7 +82,7 @@ public extension CombineCompatible where Self: UIView {
 	
 	func screenEdgePanGesture(
 		delegate: UIGestureRecognizerDelegate
-	) -> AnyPublisher<UITapGestureRecognizer, Never> {
+	) -> AnyPublisher<UIScreenEdgePanGestureRecognizer, Never> {
 		publisher(
 			for: .screenEdgePan,
 			delegate: delegate
