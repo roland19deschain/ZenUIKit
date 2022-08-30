@@ -6,9 +6,7 @@ public extension UIView {
 	Animates horizontal shaking of the receiver.
 	- parameter completion: A block object to be executed when the animation sequence ends.
 	*/
-	func horizontalShake(
-		with completion: (() -> Void)? = nil
-	) {
+	func horizontalShake(completion: (() -> Void)? = nil) {
 		CATransaction.begin()
 		
 		if let completion = completion {
