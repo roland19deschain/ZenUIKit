@@ -7,6 +7,13 @@ public extension UIView {
 		String(describing: Self.self)
 	}
 	
+	/// Adds a views to the end of the receiver’s list of subviews.
+	func addSubviews(_ subviews: [UIView]) {
+		subviews.forEach {
+			addSubview($0)
+		}
+	}
+	
 	/// Returns the first responder, if one exists (searches recursively, throughout the whole hierarchy).
 	var currentFirstResponder: UIResponder? {
 		guard !isFirstResponder else {
