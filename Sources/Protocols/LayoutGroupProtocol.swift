@@ -13,7 +13,7 @@ extension NSLayoutConstraint: LayoutGroupProtocol {
 	}
 }
 
-extension Array: LayoutGroupProtocol where Element == NSLayoutConstraint {
+extension Array: LayoutGroupProtocol where Element: NSLayoutConstraint {
 
 	public var constraints: [NSLayoutConstraint] {
 		self

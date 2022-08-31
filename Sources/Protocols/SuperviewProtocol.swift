@@ -4,7 +4,7 @@ public protocol SuperviewProtocol {}
 
 extension UIView: SuperviewProtocol {}
 
-public extension SuperviewProtocol where Self == UIView {
+public extension SuperviewProtocol where Self: UIView {
 
 	/// Add a child subview and directly activate the given constraints.
 	func addSubview<View: UIView>(
