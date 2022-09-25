@@ -4,7 +4,8 @@ import UIKit
 
 public extension UIView {
 	
-	/// Returns a collection of constraints to anchor the bounds of the receiver to the given view.
+	/// Returns a collection of constraints to anchor the bounds
+	/// of the receiver to the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
 	func boundsAnchors(
@@ -31,34 +32,8 @@ public extension UIView {
 		]
 	}
 	
-	/// Returns a collection of constraints to restrict the bounds of the receiver inside the given view.
-	/// - Parameter view: The view to anchor to.
-	/// - Returns: The layout constraints needed for this constraint.
-	func withinAnchors(
-		to view: UIView,
-		edgeInsets: UIEdgeInsets = .zero
-	) -> [NSLayoutConstraint] {
-		[
-			leadingAnchor.constraint(
-				greaterThanOrEqualTo: view.leadingAnchor,
-				constant: edgeInsets.left
-			),
-			view.trailingAnchor.constraint(
-				greaterThanOrEqualTo: trailingAnchor,
-				constant: edgeInsets.right
-			),
-			topAnchor.constraint(
-				greaterThanOrEqualTo: view.topAnchor,
-				constant: edgeInsets.top
-			),
-			view.bottomAnchor.constraint(
-				greaterThanOrEqualTo: bottomAnchor,
-				constant: edgeInsets.bottom
-			)
-		]
-	}
-	
-	/// Returns a collection of constraints to anchor the bounds of the receiver to safe area layout guide of the given view.
+	/// Returns a collection of constraints to anchor the bounds of the receiver
+	/// to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
 	func safeAreaAnchors(
@@ -135,7 +110,8 @@ public extension UIView {
 
 public extension UIView {
 	
-	/// Returns a collection of constraints to limit the receivers bounds to the bounds of the given view.
+	/// Returns a collection of constraints to limit the receivers bounds
+	/// to the bounds of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
 	func enclosedInsideAnchors(
@@ -162,7 +138,48 @@ public extension UIView {
 		]
 	}
 	
-	/// Returns a collection of constraints to limit the receivers bounds to safe area layout guide of the given view.
+	/// Returns a collection of constraints to limit the receivers bounds
+	/// along the X-axis to the bounds of the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Returns: The layout constraints needed for this constraint.
+	func horizontallyEnclosedInsideAnchors(
+		in view: UIView,
+		edgeInset: CGFloat = .zero
+	) -> [NSLayoutConstraint] {
+		[
+			leadingAnchor.constraint(
+				greaterThanOrEqualTo: view.leadingAnchor,
+				constant: edgeInset
+			),
+			view.trailingAnchor.constraint(
+				greaterThanOrEqualTo: trailingAnchor,
+				constant: edgeInset
+			)
+		]
+	}
+	
+	/// Returns a collection of constraints to limit the receivers bounds
+	/// along the Y-axis to the bounds of the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Returns: The layout constraints needed for this constraint.
+	func verticallyEnclosedInsideAnchors(
+		in view: UIView,
+		edgeInset: CGFloat = .zero
+	) -> [NSLayoutConstraint] {
+		[
+			topAnchor.constraint(
+				greaterThanOrEqualTo: view.topAnchor,
+				constant: edgeInset
+			),
+			view.bottomAnchor.constraint(
+				greaterThanOrEqualTo: bottomAnchor,
+				constant: edgeInset
+			)
+		]
+	}
+	
+	/// Returns a collection of constraints to limit the receivers bounds
+	/// to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
 	func enclosedInsideSafeAreaAnchors(
@@ -185,6 +202,46 @@ public extension UIView {
 			view.safeAreaLayoutGuide.bottomAnchor.constraint(
 				greaterThanOrEqualTo: bottomAnchor,
 				constant: edgeInsets.bottom
+			)
+		]
+	}
+	
+	/// Returns a collection of constraints to limit the receivers bounds
+	/// along the X-axis to safe area layout guide of the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Returns: The layout constraints needed for this constraint.
+	func horizontallyEnclosedInsideSafeAreaAnchors(
+		in view: UIView,
+		edgeInset: CGFloat = .zero
+	) -> [NSLayoutConstraint] {
+		[
+			leadingAnchor.constraint(
+				greaterThanOrEqualTo: view.safeAreaLayoutGuide.leadingAnchor,
+				constant: edgeInset
+			),
+			view.safeAreaLayoutGuide.trailingAnchor.constraint(
+				greaterThanOrEqualTo: trailingAnchor,
+				constant: edgeInset
+			)
+		]
+	}
+	
+	/// Returns a collection of constraints to limit the receivers bounds
+	/// along the Y-axis to safe area layout guide of the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Returns: The layout constraints needed for this constraint.
+	func verticallyEnclosedInsideSafeAreaAnchors(
+		in view: UIView,
+		edgeInset: CGFloat = .zero
+	) -> [NSLayoutConstraint] {
+		[
+			topAnchor.constraint(
+				greaterThanOrEqualTo: view.safeAreaLayoutGuide.topAnchor,
+				constant: edgeInset
+			),
+			view.safeAreaLayoutGuide.bottomAnchor.constraint(
+				greaterThanOrEqualTo: bottomAnchor,
+				constant: edgeInset
 			)
 		]
 	}
