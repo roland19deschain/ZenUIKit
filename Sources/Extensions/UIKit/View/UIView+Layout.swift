@@ -32,6 +32,46 @@ public extension UIView {
 		]
 	}
 	
+	/// Returns a collection of constraints to anchor the bounds
+	/// along the X-axis of the receiver to the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Returns: The layout constraints needed for this constraint.
+	func horizontalBoundsAnchors(
+		to view: UIView,
+		edgeInset: CGFloat = .zero
+	) -> [NSLayoutConstraint] {
+		[
+			leadingAnchor.constraint(
+				equalTo: view.leadingAnchor,
+				constant: edgeInset
+			),
+			view.trailingAnchor.constraint(
+				equalTo: trailingAnchor,
+				constant: edgeInset
+			)
+		]
+	}
+	
+	/// Returns a collection of constraints to anchor the bounds
+	/// along the Y-axis of the receiver to the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Returns: The layout constraints needed for this constraint.
+	func verticalBoundsAnchors(
+		to view: UIView,
+		edgeInset: CGFloat = .zero
+	) -> [NSLayoutConstraint] {
+		[
+			topAnchor.constraint(
+				equalTo: view.topAnchor,
+				constant: edgeInset
+			),
+			view.bottomAnchor.constraint(
+				equalTo: bottomAnchor,
+				constant: edgeInset
+			)
+		]
+	}
+	
 	/// Returns a collection of constraints to anchor the bounds of the receiver
 	/// to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
@@ -56,6 +96,46 @@ public extension UIView {
 			view.safeAreaLayoutGuide.bottomAnchor.constraint(
 				equalTo: bottomAnchor,
 				constant: edgeInsets.bottom
+			)
+		]
+	}
+	
+	/// Returns a collection of constraints to anchor the bounds of the receiver
+	/// along the X-axis to safe area layout guide of the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Returns: The layout constraints needed for this constraint.
+	func horizontalSafeAreaAnchors(
+		to view: UIView,
+		edgeInset: CGFloat = .zero
+	) -> [NSLayoutConstraint] {
+		[
+			leadingAnchor.constraint(
+				equalTo: view.safeAreaLayoutGuide.leadingAnchor,
+				constant: edgeInset
+			),
+			view.safeAreaLayoutGuide.trailingAnchor.constraint(
+				equalTo: trailingAnchor,
+				constant: edgeInset
+			)
+		]
+	}
+	
+	/// Returns a collection of constraints to anchor the bounds of the receiver
+	/// along the Y-axis to safe area layout guide of the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Returns: The layout constraints needed for this constraint.
+	func verticalSafeAreaAnchors(
+		to view: UIView,
+		edgeInset: CGFloat = .zero
+	) -> [NSLayoutConstraint] {
+		[
+			topAnchor.constraint(
+				equalTo: view.safeAreaLayoutGuide.topAnchor,
+				constant: edgeInset
+			),
+			view.safeAreaLayoutGuide.bottomAnchor.constraint(
+				equalTo: bottomAnchor,
+				constant: edgeInset
 			)
 		]
 	}
