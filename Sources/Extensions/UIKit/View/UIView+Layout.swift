@@ -31,6 +31,33 @@ public extension UIView {
 		]
 	}
 	
+	/// Returns a collection of constraints to restrict the bounds of the receiver inside the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Returns: The layout constraints needed for this constraint.
+	func withinAnchors(
+		to view: UIView,
+		edgeInsets: UIEdgeInsets = .zero
+	) -> [NSLayoutConstraint] {
+		[
+			leadingAnchor.constraint(
+				greaterThanOrEqualTo: view.leadingAnchor,
+				constant: edgeInsets.left
+			),
+			view.trailingAnchor.constraint(
+				greaterThanOrEqualTo: trailingAnchor,
+				constant: edgeInsets.right
+			),
+			topAnchor.constraint(
+				greaterThanOrEqualTo: view.topAnchor,
+				constant: edgeInsets.top
+			),
+			view.bottomAnchor.constraint(
+				greaterThanOrEqualTo: bottomAnchor,
+				constant: edgeInsets.bottom
+			)
+		]
+	}
+	
 	/// Returns a collection of constraints to anchor the bounds of the receiver to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
