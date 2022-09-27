@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: - Anchors - Bounds
+// MARK: - Constraints - Bounds
 
 public extension UIView {
 	
@@ -8,7 +8,7 @@ public extension UIView {
 	/// of the receiver to the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func boundsAnchors(
+	func boundsConstraints(
 		to view: UIView,
 		edgeInsets: UIEdgeInsets = .zero
 	) -> [NSLayoutConstraint] {
@@ -36,7 +36,7 @@ public extension UIView {
 	/// along the X-axis of the receiver to the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func horizontalBoundsAnchors(
+	func horizontalBoundsConstraints(
 		to view: UIView,
 		edgeInset: CGFloat = .zero
 	) -> [NSLayoutConstraint] {
@@ -56,7 +56,7 @@ public extension UIView {
 	/// along the Y-axis of the receiver to the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func verticalBoundsAnchors(
+	func verticalBoundsConstraints(
 		to view: UIView,
 		edgeInset: CGFloat = .zero
 	) -> [NSLayoutConstraint] {
@@ -76,7 +76,7 @@ public extension UIView {
 	/// to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func safeAreaAnchors(
+	func safeAreaConstraints(
 		to view: UIView,
 		edgeInsets: UIEdgeInsets = .zero
 	) -> [NSLayoutConstraint] {
@@ -104,7 +104,7 @@ public extension UIView {
 	/// along the X-axis to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func horizontalSafeAreaAnchors(
+	func horizontalSafeAreaConstraints(
 		to view: UIView,
 		edgeInset: CGFloat = .zero
 	) -> [NSLayoutConstraint] {
@@ -124,7 +124,7 @@ public extension UIView {
 	/// along the Y-axis to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func verticalSafeAreaAnchors(
+	func verticalSafeAreaConstraints(
 		to view: UIView,
 		edgeInset: CGFloat = .zero
 	) -> [NSLayoutConstraint] {
@@ -142,14 +142,14 @@ public extension UIView {
 	
 }
 
-// MARK: - Anchors - Center
+// MARK: - Constraints - Center
 
 public extension UIView {
 	
 	/// Returns a collection of constraints to anchor the center of the receiver to the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func centerAnchors(
+	func centerConstraints(
 		to view: UIView,
 		offset: CGPoint = .zero
 	) -> [NSLayoutConstraint] {
@@ -168,7 +168,7 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the center of the receiver to safe area layout guide center of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func centerSafeAreaAnchors(
+	func centerSafeAreaConstraints(
 		to view: UIView,
 		offset: CGPoint = .zero
 	) -> [NSLayoutConstraint] {
@@ -186,7 +186,7 @@ public extension UIView {
 	
 }
 
-// MARK: - Anchors - Enclosed Inside
+// MARK: - Constraints - Enclosed Inside
 
 public extension UIView {
 	
@@ -194,7 +194,7 @@ public extension UIView {
 	/// to the bounds of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func enclosedInsideAnchors(
+	func enclosedInsideConstraints(
 		in view: UIView,
 		edgeInsets: UIEdgeInsets = .zero
 	) -> [NSLayoutConstraint] {
@@ -222,7 +222,7 @@ public extension UIView {
 	/// along the X-axis to the bounds of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func horizontallyEnclosedInsideAnchors(
+	func horizontallyEnclosedInsideConstraints(
 		in view: UIView,
 		edgeInset: CGFloat = .zero
 	) -> [NSLayoutConstraint] {
@@ -242,7 +242,7 @@ public extension UIView {
 	/// along the Y-axis to the bounds of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func verticallyEnclosedInsideAnchors(
+	func verticallyEnclosedInsideConstraints(
 		in view: UIView,
 		edgeInset: CGFloat = .zero
 	) -> [NSLayoutConstraint] {
@@ -262,7 +262,7 @@ public extension UIView {
 	/// to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func enclosedInsideSafeAreaAnchors(
+	func enclosedInsideSafeAreaConstraints(
 		in view: UIView,
 		edgeInsets: UIEdgeInsets = .zero
 	) -> [NSLayoutConstraint] {
@@ -290,7 +290,7 @@ public extension UIView {
 	/// along the X-axis to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func horizontallyEnclosedInsideSafeAreaAnchors(
+	func horizontallyEnclosedInsideSafeAreaConstraints(
 		in view: UIView,
 		edgeInset: CGFloat = .zero
 	) -> [NSLayoutConstraint] {
@@ -310,7 +310,7 @@ public extension UIView {
 	/// along the Y-axis to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
 	/// - Returns: The layout constraints needed for this constraint.
-	func verticallyEnclosedInsideSafeAreaAnchors(
+	func verticallyEnclosedInsideSafeAreaConstraints(
 		in view: UIView,
 		edgeInset: CGFloat = .zero
 	) -> [NSLayoutConstraint] {
