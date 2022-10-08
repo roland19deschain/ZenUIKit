@@ -1,6 +1,15 @@
 import UIKit
 
 public extension NSLayoutConstraint {
+	
+	/// Returns the constraint sender with the passed priority.
+	///
+	/// - Parameter priority: The priority to be set.
+	/// - Returns: The receiver adjusted with the new priority.
+	func priority(_ priority: Float) -> NSLayoutConstraint {
+		self.priority = .init(priority)
+		return self
+	}
 
 	/// Returns the constraint sender with the passed priority.
 	///
