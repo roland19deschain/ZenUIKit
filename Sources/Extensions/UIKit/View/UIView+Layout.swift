@@ -7,7 +7,7 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the bounds
 	/// of the receiver to the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func boundsConstraints(
 		to view: UIView,
 		edgeInsets: UIEdgeInsets = .zero
@@ -35,7 +35,7 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the bounds
 	/// along the X-axis of the receiver to the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func horizontalBoundsConstraints(
 		to view: UIView,
 		edgeInset: CGFloat = .zero
@@ -55,7 +55,7 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the bounds
 	/// along the Y-axis of the receiver to the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func verticalBoundsConstraints(
 		to view: UIView,
 		edgeInset: CGFloat = .zero
@@ -75,7 +75,7 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the bounds of the receiver
 	/// to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func safeAreaConstraints(
 		to view: UIView,
 		edgeInsets: UIEdgeInsets = .zero
@@ -103,7 +103,7 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the bounds of the receiver
 	/// along the X-axis to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func horizontalSafeAreaConstraints(
 		to view: UIView,
 		edgeInset: CGFloat = .zero
@@ -123,7 +123,7 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the bounds of the receiver
 	/// along the Y-axis to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func verticalSafeAreaConstraints(
 		to view: UIView,
 		edgeInset: CGFloat = .zero
@@ -147,8 +147,18 @@ public extension UIView {
 public extension UIView {
 	
 	/// Returns a collection of constraints that defines a constant size.
+	/// - Parameter side: The value to be used for the width and height.
+	/// - Returns: An `NSLayoutConstraint` objects.
+	func sizeConstraints(_ side: CGFloat) -> [NSLayoutConstraint] {
+		[
+			widthAnchor.constraint(equalToConstant: side),
+			heightAnchor.constraint(equalToConstant: side)
+		]
+	}
+	
+	/// Returns a collection of constraints that defines a constant size.
 	/// - Parameter size: The constant size of the receiver.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func sizeConstraints(_ size: CGSize) -> [NSLayoutConstraint] {
 		[
 			widthAnchor.constraint(equalToConstant: size.width),
@@ -169,7 +179,7 @@ public extension UIView {
 	
 	/// Returns an aspect ratio constraint (the ratio of its width to its height).
 	/// - Parameter ratio: The ratio of its width to its height, default value is 1.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` object.
 	func aspectRatioConstraint(multiplier: CGFloat = 1) -> NSLayoutConstraint {
 		widthAnchor.constraint(
 			equalTo: heightAnchor,
@@ -186,7 +196,7 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the center
 	/// of the receiver to the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func centerConstraints(
 		to view: UIView,
 		offset: CGPoint = .zero
@@ -206,7 +216,7 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the center of the receiver
 	/// to safe area layout guide center of the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func centerSafeAreaConstraints(
 		to view: UIView,
 		offset: CGPoint = .zero
@@ -232,7 +242,7 @@ public extension UIView {
 	/// Returns a collection of constraints to limit the receivers bounds
 	/// to the bounds of the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func enclosedInsideConstraints(
 		in view: UIView,
 		edgeInsets: UIEdgeInsets = .zero
@@ -260,7 +270,7 @@ public extension UIView {
 	/// Returns a collection of constraints to limit the receivers bounds
 	/// along the X-axis to the bounds of the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func horizontallyEnclosedInsideConstraints(
 		in view: UIView,
 		edgeInset: CGFloat = .zero
@@ -280,7 +290,7 @@ public extension UIView {
 	/// Returns a collection of constraints to limit the receivers bounds
 	/// along the Y-axis to the bounds of the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func verticallyEnclosedInsideConstraints(
 		in view: UIView,
 		edgeInset: CGFloat = .zero
@@ -300,7 +310,7 @@ public extension UIView {
 	/// Returns a collection of constraints to limit the receivers bounds
 	/// to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func enclosedInsideSafeAreaConstraints(
 		in view: UIView,
 		edgeInsets: UIEdgeInsets = .zero
@@ -328,7 +338,7 @@ public extension UIView {
 	/// Returns a collection of constraints to limit the receivers bounds
 	/// along the X-axis to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func horizontallyEnclosedInsideSafeAreaConstraints(
 		in view: UIView,
 		edgeInset: CGFloat = .zero
@@ -348,7 +358,7 @@ public extension UIView {
 	/// Returns a collection of constraints to limit the receivers bounds
 	/// along the Y-axis to safe area layout guide of the given view.
 	/// - Parameter view: The view to anchor to.
-	/// - Returns: A `NSLayoutConstraint` object.
+	/// - Returns: An `NSLayoutConstraint` objects.
 	func verticallyEnclosedInsideSafeAreaConstraints(
 		in view: UIView,
 		edgeInset: CGFloat = .zero
