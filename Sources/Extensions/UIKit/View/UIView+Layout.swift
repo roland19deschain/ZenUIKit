@@ -221,7 +221,7 @@ public extension UIView {
 	/// - Returns: An `NSLayoutConstraint` objects.
 	func centerConstraints(
 		to view: UIView,
-		offset: CGPoint = .zero
+		offset: CGPoint
 	) -> [NSLayoutConstraint] {
 		[
 			centerXAnchor.constraint(
@@ -263,7 +263,7 @@ public extension UIView {
 	/// - Returns: An `NSLayoutConstraint` objects.
 	func centerSafeAreaConstraints(
 		to view: UIView,
-		offset: CGPoint = .zero
+		offset: CGPoint
 	) -> [NSLayoutConstraint] {
 		[
 			centerXAnchor.constraint(
