@@ -196,6 +196,28 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the center
 	/// of the receiver to the given view.
 	/// - Parameter view: The view to anchor to.
+	/// - Parameter offset: The offset from the center (same for x-axis and y-axis).
+	/// - Returns: An `NSLayoutConstraint` objects.
+	func centerConstraints(
+		to view: UIView,
+		offset: CGFloat = 0
+	) -> [NSLayoutConstraint] {
+		[
+			centerXAnchor.constraint(
+				equalTo: view.centerXAnchor,
+				constant: offset
+			),
+			centerYAnchor.constraint(
+				equalTo: view.centerYAnchor,
+				constant: offset
+			)
+		]
+	}
+	
+	/// Returns a collection of constraints to anchor the center
+	/// of the receiver to the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Parameter offset: The offset from the center.
 	/// - Returns: An `NSLayoutConstraint` objects.
 	func centerConstraints(
 		to view: UIView,
@@ -216,6 +238,28 @@ public extension UIView {
 	/// Returns a collection of constraints to anchor the center of the receiver
 	/// to safe area layout guide center of the given view.
 	/// - Parameter view: The view to anchor to.
+	/// - Parameter offset: The offset from the center (same for x-axis and y-axis).
+	/// - Returns: An `NSLayoutConstraint` objects.
+	func centerSafeAreaConstraints(
+		to view: UIView,
+		offset: CGFloat = 0
+	) -> [NSLayoutConstraint] {
+		[
+			centerXAnchor.constraint(
+				equalTo: view.safeAreaLayoutGuide.centerXAnchor,
+				constant: offset
+			),
+			centerYAnchor.constraint(
+				equalTo: view.safeAreaLayoutGuide.centerYAnchor,
+				constant: offset
+			)
+		]
+	}
+	
+	/// Returns a collection of constraints to anchor the center of the receiver
+	/// to safe area layout guide center of the given view.
+	/// - Parameter view: The view to anchor to.
+	/// - Parameter offset: The offset from the center.
 	/// - Returns: An `NSLayoutConstraint` objects.
 	func centerSafeAreaConstraints(
 		to view: UIView,
