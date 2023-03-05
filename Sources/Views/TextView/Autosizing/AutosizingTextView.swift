@@ -1,5 +1,6 @@
 import UIKit
 
+/// `UITextView` defining its actual size (aka `intrinsicContentSize`) as the size of its contents.
 public final class AutosizingTextView: UITextView {
 	
 	// MARK: - Computed Properties

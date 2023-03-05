@@ -1,7 +1,6 @@
 import UIKit
 
-// uicollectionview resizable for content
-
+/// `UICollectionView` defining its actual size (aka `intrinsicContentSize`) as the size of its contents.
 open class AutosizingCollectionView: UICollectionView {
 	
 	// MARK: - Life Cycle
