@@ -3,14 +3,14 @@ import UIKit
 public extension UICollectionView {
 	
 	/**
-	Returns a reusable collection-view cell object, configured by a specified closure and adds it to the collection.
-	String representation of _Cell_ class - used as a reuse identifier.
-	If such an identifier has not yet been registered,
-	this method automatically registers it for use in creating new collection cells.
-	- parameter indexPath: An index path identifying a row in the collection view.
-	- parameter configurator: The block for configure the cell.
-	- returns: A reusable collection-view cell object.
-	*/
+	 Returns a reusable collection-view cell object, configured by a specified closure and adds it to the collection.
+	 String representation of _Cell_ class - used as a reuse identifier.
+	 If such an identifier has not yet been registered,
+	 this method automatically registers it for use in creating new collection cells.
+	 - parameter indexPath: An index path identifying a row in the collection view.
+	 - parameter configurator: The block for configure the cell.
+	 - returns: A reusable collection-view cell object.
+	 */
 	func configuredCell<Cell: UICollectionViewCell>(
 		at indexPath: IndexPath,
 		configurator: (Cell) -> Void
@@ -34,14 +34,14 @@ public extension UICollectionView {
 	}
 	
 	/**
-	Returns a reusable collection-view cell object, configured by a specified closure and adds it to the collection.
-	String representation of _Cell_ class - used as a _Nib_ name and reuse identifier.
-	If such an identifier has not yet been registered,
-	this method automatically registers it for use in creating new collection cells.
-	- parameter indexPath: An index path identifying a row in the collection view.
-	- parameter configurator: The block for configure the cell.
-	- returns: A reusable collection-view cell object.
-	*/
+	 Returns a reusable collection-view cell object, configured by a specified closure and adds it to the collection.
+	 String representation of _Cell_ class - used as a _Nib_ name and reuse identifier.
+	 If such an identifier has not yet been registered,
+	 this method automatically registers it for use in creating new collection cells.
+	 - parameter indexPath: An index path identifying a row in the collection view.
+	 - parameter configurator: The block for configure the cell.
+	 - returns: A reusable collection-view cell object.
+	 */
 	func configuredNibCell<Cell: UICollectionViewCell>(
 		at indexPath: IndexPath,
 		configurator: (Cell) -> Void
@@ -68,13 +68,13 @@ public extension UICollectionView {
 	}
 	
 	/**
-	Returns an empty reusable collection-view cell object and adds it to the collection.
-	String representation of _UICollectionViewCell_ class - used as a reuse identifier.
-	If such an identifier has not yet been registered,
-	this method automatically registers it for use in creating new collection cells.
-	- parameter indexPath: An index path identifying a row in the collection view.
-	- returns: An empty reusable collection-view cell object.
-	*/
+	 Returns an empty reusable collection-view cell object and adds it to the collection.
+	 String representation of _UICollectionViewCell_ class - used as a reuse identifier.
+	 If such an identifier has not yet been registered,
+	 this method automatically registers it for use in creating new collection cells.
+	 - parameter indexPath: An index path identifying a row in the collection view.
+	 - returns: An empty reusable collection-view cell object.
+	 */
 	func configuredEmptyCell(at indexPath: IndexPath) -> UICollectionViewCell {
 		configuredCell(
 			at: indexPath,
@@ -96,7 +96,7 @@ private extension UICollectionView {
 		let cell: Cell = dequeueReusableCell(
 			withReuseIdentifier: reuseIdentifier,
 			for: indexPath
-			) as! Cell
+		) as! Cell
 		
 		configurator(cell)
 		

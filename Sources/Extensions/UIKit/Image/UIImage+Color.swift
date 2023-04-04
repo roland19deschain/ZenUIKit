@@ -3,10 +3,10 @@ import UIKit
 public extension UIImage {
 	
 	/**
-	Returns the color of the pixel at the specified position.
-	- parameter position: The position of examined pixel.
-	- returns: The color of the pixel at the specified position.
-	*/
+	 Returns the color of the pixel at the specified position.
+	 - parameter position: The position of examined pixel.
+	 - returns: The color of the pixel at the specified position.
+	 */
 	func color(at position: CGPoint) -> UIColor? {
 		guard let pixelData = cgImage?.dataProvider?.data else {
 			return nil

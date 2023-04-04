@@ -8,10 +8,10 @@ public extension UILabel {
 	///   - delay: The amount of time (measured in seconds) to wait before beginning the animations.
 	///   - newColor: New text color value.
 	///   - completion: A block object to be executed when the animation sequence ends.
-	func animateTextColor(
+	func animateTransition(
+		newColor: UIColor,
 		duration: TimeInterval = 0.3,
 		delay: TimeInterval = 0,
-		newColor: UIColor,
 		completion: ((Bool) -> Void)? = nil
 	) {
 		if delay > 0 {
@@ -41,10 +41,10 @@ public extension UILabel {
 	///   - delay: The amount of time (measured in seconds) to wait before beginning the animations.
 	///   - newText: New text value.
 	///   - completion: A block object to be executed when the animation sequence ends.
-	func animateTextChange(
+	func animateTransition(
+		newText: String,
 		duration: TimeInterval = 0.3,
 		delay: TimeInterval = 0,
-		newText: String,
 		completion: ((Bool) -> Void)? = nil
 	) {
 		if delay > 0 {

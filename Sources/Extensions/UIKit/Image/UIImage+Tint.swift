@@ -3,15 +3,14 @@ import UIKit
 public extension UIImage {
 	
 	/**
-	Fills all opaque pixels of the image with color.
-	- parameter color: Fill color for image.
-	- returns: The tinted picture.
-	*/
+	 Fills all opaque pixels of the image with color.
+	 - parameter color: Fill color for image.
+	 - returns: The tinted picture.
+	 */
 	func tinted(in color: UIColor) -> UIImage {
 		guard let maskImage = cgImage else {
 			return self
 		}
-		
 		let width = size.width * scale
 		let height = size.height * scale
 		let bounds = CGRect(
@@ -20,7 +19,6 @@ public extension UIImage {
 			width: width,
 			height: height
 		)
-		
 		let alphaInfo = CGImageAlphaInfo.premultipliedLast.rawValue
 		
 		guard let context = CGContext(
@@ -31,10 +29,9 @@ public extension UIImage {
 			bytesPerRow: 0,
 			space: CGColorSpaceCreateDeviceRGB(),
 			bitmapInfo: CGBitmapInfo(rawValue: alphaInfo).rawValue
-			) else {
-				return self
+		) else {
+			return self
 		}
-		
 		context.clip(
 			to: bounds,
 			mask: maskImage

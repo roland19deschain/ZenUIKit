@@ -3,15 +3,15 @@ import UIKit
 public extension UIImage {
 	
 	/**
-	Returns an image decompressed by redrawing it in graphics context.
-	*/
+	 Returns an image decompressed by redrawing it in graphics context.
+	 */
 	var decompressed: UIImage {
-		guard let cgImage = cgImage else {
+		guard let cgImage else {
 			return self
 		}
 		let alphaInfo: CGImageAlphaInfo = hasAlpha
-			? .noneSkipLast
-			: .premultipliedLast
+		? .noneSkipLast
+		: .premultipliedLast
 		
 		guard let context = CGContext(
 			data: nil,
@@ -21,10 +21,9 @@ public extension UIImage {
 			bytesPerRow: 0,
 			space: CGColorSpaceCreateDeviceRGB(),
 			bitmapInfo: alphaInfo.rawValue
-			) else {
-				return self
+		) else {
+			return self
 		}
-		
 		let rect = CGRect(
 			origin: .zero,
 			size: size
@@ -33,11 +32,9 @@ public extension UIImage {
 			cgImage,
 			in: rect
 		)
-		
 		guard let decompressedImage = context.makeImage() else {
 			return self
 		}
-		
 		return UIImage(
 			cgImage: decompressedImage,
 			scale: scale,

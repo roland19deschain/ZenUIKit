@@ -11,8 +11,8 @@ public extension UIBezierPath {
 			lineCap: lineCapStyle,
 			lineJoin: lineJoinStyle,
 			miterLimit: miterLimit
-			) else {
-				return UIBezierPath()
+		) else {
+			return UIBezierPath()
 		}
 		return UIBezierPath(cgPath: path)
 	}
