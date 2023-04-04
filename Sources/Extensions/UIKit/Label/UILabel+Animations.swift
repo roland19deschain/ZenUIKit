@@ -4,9 +4,9 @@ public extension UILabel {
 	
 	/// Creates a transition animation from receivers text color to the specified new one.
 	/// - Parameters:
+	///   - newColor: New text color value.
 	///   - duration: The total duration of the animations, measured in seconds.
 	///   - delay: The amount of time (measured in seconds) to wait before beginning the animations.
-	///   - newColor: New text color value.
 	///   - completion: A block object to be executed when the animation sequence ends.
 	func animateTransition(
 		newColor: UIColor,
@@ -37,9 +37,9 @@ public extension UILabel {
 	
 	/// Creates a transition animation from receivers text to the specified new one.
 	/// - Parameters:
+	///   - newText: New text value.
 	///   - duration: The total duration of the animations, measured in seconds.
 	///   - delay: The amount of time (measured in seconds) to wait before beginning the animations.
-	///   - newText: New text value.
 	///   - completion: A block object to be executed when the animation sequence ends.
 	func animateTransition(
 		newText: String,

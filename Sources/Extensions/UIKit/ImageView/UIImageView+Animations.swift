@@ -6,6 +6,7 @@ public extension UIImageView {
 	/// - Parameters:
 	///   - newImage: The new image to be displayed in the image view.
 	///   - duration: The duration of the transition animation, measured in seconds (default value is 0.3).
+	///   - delay: The amount of time (measured in seconds) to wait before beginning the animations.
 	///   - completion: A block object to be executed when the animation sequence ends.
 	func animateTransition(
 		newImage: UIImage?,
