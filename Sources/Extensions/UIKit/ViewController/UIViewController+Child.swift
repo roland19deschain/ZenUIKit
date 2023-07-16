@@ -96,15 +96,13 @@ public extension UIViewController {
 		UIView.animate(
 			withDuration: duration,
 			delay: delay,
-			options: .curveEaseInOut,
-			animations: {
-				viewController.view.alpha = 0
-			},
-			completion: { success in
-				self.removeChild(viewController: viewController)
-				completion?(success)
-			}
-		)
+			options: .curveEaseInOut
+		) {
+			viewController.view.alpha = 0
+		} completion: { success in
+			self.removeChild(viewController: viewController)
+			completion?(success)
+		}
 	}
 	
 }
