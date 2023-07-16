@@ -1,90 +1,154 @@
 import UIKit
 import Combine
 
-// TODO: Add documentation
-
 // MARK: - CombineCompatible
 
 extension UIView: CombineCompatible {}
 
-// MARK: - All Gestures Publisher
+// MARK: - Tap
 
 public extension CombineCompatible where Self: UIView {
 	
 	var tapGesturePublisher: AnyPublisher<UITapGestureRecognizer, Never> {
-		publisher(for: .tap)
+		publisher(gesture: .tap)
+	}
+	
+	func tapGesture(
+		builder: () -> UITapGestureRecognizer
+	) -> AnyPublisher<UITapGestureRecognizer, Never> {
+		publisher(builder: builder)
 	}
 	
 	func tapGesture(
 		delegate: UIGestureRecognizerDelegate
 	) -> AnyPublisher<UITapGestureRecognizer, Never> {
 		publisher(
-			for: .tap,
+			gesture: .tap,
 			delegate: delegate
 		)
 	}
 	
+}
+
+// MARK: - Swipe
+
+public extension CombineCompatible where Self: UIView {
+	
 	var swipeGesturePublisher: AnyPublisher<UISwipeGestureRecognizer, Never> {
-		publisher(for: .swipe)
+		publisher(gesture: .swipe)
+	}
+	
+	func swipeGesture(
+		builder: () -> UISwipeGestureRecognizer
+	) -> AnyPublisher<UISwipeGestureRecognizer, Never> {
+		publisher(builder: builder)
 	}
 	
 	func swipeGesture(
 		delegate: UIGestureRecognizerDelegate
 	) -> AnyPublisher<UISwipeGestureRecognizer, Never> {
 		publisher(
-			for: .swipe,
+			gesture: .swipe,
 			delegate: delegate
 		)
 	}
 	
+}
+
+// MARK: - Long Press
+
+public extension CombineCompatible where Self: UIView {
+	
 	var longPressGesturePublisher: AnyPublisher<UILongPressGestureRecognizer, Never> {
-		publisher(for: .longPress)
+		publisher(gesture: .longPress)
+	}
+	
+	func longPressGesture(
+		builder: () -> UILongPressGestureRecognizer
+	) -> AnyPublisher<UILongPressGestureRecognizer, Never> {
+		publisher(builder: builder)
 	}
 	
 	func longPressGesture(
 		delegate: UIGestureRecognizerDelegate
 	) -> AnyPublisher<UILongPressGestureRecognizer, Never> {
 		publisher(
-			for: .longPress,
+			gesture: .longPress,
 			delegate: delegate
 		)
 	}
 	
+}
+
+// MARK: - Pan
+
+public extension CombineCompatible where Self: UIView {
+	
 	var panGesturePublisher: AnyPublisher<UIPanGestureRecognizer, Never> {
-		publisher(for: .pan)
+		publisher(gesture: .pan)
+	}
+	
+	func panGesture(
+		builder: () -> UIPanGestureRecognizer
+	) -> AnyPublisher<UIPanGestureRecognizer, Never> {
+		publisher(builder: builder)
 	}
 	
 	func panGesture(
 		delegate: UIGestureRecognizerDelegate
 	) -> AnyPublisher<UIPanGestureRecognizer, Never> {
 		publisher(
-			for: .pan,
+			gesture: .pan,
 			delegate: delegate
 		)
 	}
 	
+}
+
+// MARK: - Pinch
+
+public extension CombineCompatible where Self: UIView {
+	
 	var pinchGesturePublisher: AnyPublisher<UIPinchGestureRecognizer, Never> {
-		publisher(for: .pinch)
+		publisher(gesture: .pinch)
+	}
+	
+	func pinchGesture(
+		builder: () -> UIPinchGestureRecognizer
+	) -> AnyPublisher<UIPinchGestureRecognizer, Never> {
+		publisher(builder: builder)
 	}
 	
 	func pinchGesture(
 		delegate: UIGestureRecognizerDelegate
 	) -> AnyPublisher<UIPinchGestureRecognizer, Never> {
 		publisher(
-			for: .pinch,
+			gesture: .pinch,
 			delegate: delegate
 		)
 	}
 	
+}
+
+// MARK: - Pinch
+
+public extension CombineCompatible where Self: UIView {
+	
 	var screenEdgePanGesturePublisher: AnyPublisher<UIScreenEdgePanGestureRecognizer, Never> {
-		publisher(for: .screenEdgePan)
+		publisher(gesture: .screenEdgePan)
+	}
+	
+	func screenEdgePanGesture(
+		builder: () -> UIScreenEdgePanGestureRecognizer
+	) -> AnyPublisher<UIScreenEdgePanGestureRecognizer, Never> {
+		publisher(builder: builder)
 	}
 	
 	func screenEdgePanGesture(
 		delegate: UIGestureRecognizerDelegate
 	) -> AnyPublisher<UIScreenEdgePanGestureRecognizer, Never> {
 		publisher(
-			for: .screenEdgePan,
+			gesture: .screenEdgePan,
 			delegate: delegate
 		)
 	}
@@ -96,7 +160,18 @@ public extension CombineCompatible where Self: UIView {
 private extension CombineCompatible where Self: UIView {
 	
 	func publisher<T: UIGestureRecognizer>(
-		for gesture: Gesture,
+		builder: () -> T
+	) -> AnyPublisher<T, Never> {
+		GesturePublisher(
+			view: self,
+			builder: builder
+		).compactMap {
+			$0 as? T
+		}.eraseToAnyPublisher()
+	}
+	
+	func publisher<T: UIGestureRecognizer>(
+		gesture: Gesture,
 		delegate: UIGestureRecognizerDelegate? = nil
 	) -> AnyPublisher<T, Never> {
 		GesturePublisher(

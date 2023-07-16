@@ -5,20 +5,28 @@ struct GesturePublisher: Publisher {
 	
 	// MARK: - Stored Properties
 	
-	private let view: UIView
-	private let gesture: Gesture
-	private let delegate: UIGestureRecognizerDelegate?
+	private let gestureRecognizer: Output
 	
 	// MARK: - Life Cycle
+	
+	init(
+		view: UIView,
+		builder: () -> Output
+	) {
+		gestureRecognizer = builder()
+		view.addGestureRecognizer(gestureRecognizer)
+	}
 	
 	init(
 		view: UIView,
 		gesture: Gesture,
 		delegate: UIGestureRecognizerDelegate? = nil
 	) {
-		self.view = view
-		self.gesture = gesture
-		self.delegate = delegate
+		gestureRecognizer = GestureRecognizerFactory().gestureRecognizer(
+			for: gesture
+		)
+		gestureRecognizer.delegate = delegate
+		view.addGestureRecognizer(gestureRecognizer)
 	}
 	
 	// MARK: - Publisher
@@ -32,9 +40,7 @@ struct GesturePublisher: Publisher {
 		GesturePublisher.Output == S.Input {
 		let subscription = GestureSubscription(
 			subscriber: subscriber,
-			view: view,
-			gesture: gesture,
-			delegate: delegate
+			gestureRecognizer: gestureRecognizer
 		)
 		subscriber.receive(subscription: subscription)
 	}

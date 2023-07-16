@@ -8,27 +8,21 @@ final class GestureSubscription<SubscriberType: Subscriber>: Subscription where
 	// MARK: - Stored Properties
 	
 	private var subscriber: SubscriberType?
-	private let gestureRecognizer: UIGestureRecognizer
+	private let gestureRecognizer: SubscriberType.Input
 	
 	// MARK: - Life Cycle
 	
 	init(
 		subscriber: SubscriberType,
-		view: UIView,
-		gesture: Gesture,
-		delegate: UIGestureRecognizerDelegate? = nil
+		gestureRecognizer: SubscriberType.Input
 	) {
 		self.subscriber = subscriber
+		self.gestureRecognizer = gestureRecognizer
 		
-		gestureRecognizer = GestureRecognizerFactory().gestureRecognizer(
-			for: gesture
-		)
-		gestureRecognizer.delegate = delegate
 		gestureRecognizer.addTarget(
 			self,
 			action: #selector(eventHandler)
 		)
-		view.addGestureRecognizer(gestureRecognizer)
 	}
 	
 	// MARK: - Subscription
