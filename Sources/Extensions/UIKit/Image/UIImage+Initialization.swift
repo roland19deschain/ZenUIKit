@@ -10,7 +10,7 @@ public extension UIImage {
 	 */
 	convenience init?(
 		color: UIColor,
-		size: CGSize = CGSize(width: 1, height: 1)
+		size: CGSize = .init(width: 1, height: 1)
 	) {
 		let rect = CGRect(
 			origin: .zero,
@@ -18,7 +18,8 @@ public extension UIImage {
 		)
 		UIGraphicsBeginImageContextWithOptions(
 			size,
-			false, 0
+			false,
+			0
 		)
 		defer {
 			UIGraphicsEndImageContext()

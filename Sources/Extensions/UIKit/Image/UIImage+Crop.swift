@@ -9,8 +9,10 @@ public extension UIImage {
 	 - returns: A subimage of the image.
 	 */
 	func cropped(to rect: CGRect) -> UIImage {
-		guard let cgImage = cgImage,
-			  let image = cgImage.cropping(to: rect) else {
+		guard
+			let cgImage,
+			let image = cgImage.cropping(to: rect)
+		else {
 			return self
 		}
 		return UIImage(
