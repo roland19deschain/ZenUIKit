@@ -7,6 +7,11 @@ public extension Array where Element: NSLayoutConstraint {
 		NSLayoutConstraint.activate(self)
 	}
 	
+	/// Deactivates each constraint in the reciever.
+	func deactivate() {
+		NSLayoutConstraint.deactivate(self)
+	}
+	
 	/// Returns a new array with prioritized constraints.
 	///
 	/// - Parameter priority: The priority to be set.
