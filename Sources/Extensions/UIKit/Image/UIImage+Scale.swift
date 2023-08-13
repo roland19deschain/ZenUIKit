@@ -1,4 +1,5 @@
 import UIKit
+import ZenCoreGraphics
 
 public extension UIImage {
 	
@@ -22,7 +23,32 @@ public extension UIImage {
 				size: scaledImageSize
 			))
 		}
-		
+	}
+	
+	/// Returns image resized to the specified size.
+	func resize(to targetSize: CGSize) -> UIImage {
+		let imageSize = size
+		let widthRatio = targetSize.width / imageSize.width
+		let heightRatio = targetSize.height / imageSize.height
+		let newSize: CGSize
+		if widthRatio > heightRatio {
+			newSize = CGSize(
+				width: imageSize.width * heightRatio,
+				height: imageSize.height * heightRatio
+			)
+		} else {
+			newSize = CGSize(
+				width: imageSize.width * widthRatio,
+				height: imageSize.height * widthRatio
+			)
+		}
+		UIGraphicsBeginImageContextWithOptions(newSize, false, 1)
+		draw(in: .init(size: newSize))
+		guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+			return self
+		}
+		UIGraphicsEndImageContext()
+		return newImage
 	}
 	
 }
