@@ -26,7 +26,7 @@ public extension UIImage {
 	}
 	
 	/// Returns image resized to the specified size.
-	func resize(to targetSize: CGSize) -> UIImage {
+	func resized(to targetSize: CGSize) -> UIImage {
 		let imageSize = size
 		let widthRatio = targetSize.width / imageSize.width
 		let heightRatio = targetSize.height / imageSize.height
