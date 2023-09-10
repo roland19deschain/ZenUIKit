@@ -13,7 +13,7 @@ public extension UIColor {
 	}
 	
 	/// Return a color with random RGB and alpha values.
-	static var transparenteRandom: UIColor {
+	static var transparentRandom: UIColor {
 		UIColor(
 			red: .random(in: 0...1),
 			green: .random(in: 0...1),
