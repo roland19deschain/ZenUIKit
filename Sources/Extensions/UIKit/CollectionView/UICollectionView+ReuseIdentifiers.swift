@@ -8,7 +8,7 @@ extension UICollectionView {
 			(objc_getAssociatedObject(
 				self,
 				&Keys.cellReuseIdentifiers
-				) as? Set<String>) ?? Set()
+			) as? Set<String>) ?? Set()
 		}
 		set {
 			objc_setAssociatedObject(
@@ -26,7 +26,7 @@ extension UICollectionView {
 			(objc_getAssociatedObject(
 				self,
 				&Keys.supplementaryReuseIdentifiers
-				) as? Set<String>) ?? Set()
+			) as? Set<String>) ?? Set()
 		}
 		set {
 			objc_setAssociatedObject(
