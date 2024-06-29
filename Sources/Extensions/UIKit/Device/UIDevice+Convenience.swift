@@ -41,4 +41,23 @@ public extension UIDevice {
 		current.orientation.isLandscape
 	}
 	
+	/// Returns the battery charge level for the device,
+	/// ranges from `0.0` (fully discharged) to `1.0` (100% charged),
+	/// `-1.0` if `UIDeviceBatteryStateUnknown`.
+	static var currentBatteryLevel: Float {
+		if current.isBatteryMonitoringEnabled {
+			return current.batteryLevel
+		} else {
+			current.isBatteryMonitoringEnabled = true
+			let level = current.batteryLevel
+			current.isBatteryMonitoringEnabled = false
+			return level
+		}
+	}
+	
+	/// Returns the battery power state of the device.
+	static var currentBatteryState: UIDevice.BatteryState {
+		current.batteryState
+	}
+	
 }
