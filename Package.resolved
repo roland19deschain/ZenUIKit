@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "ZenCoreGraphics",
-        "repositoryURL": "https://github.com/roland19deschain/ZenCoreGraphics",
-        "state": {
-          "branch": null,
-          "revision": "e9c599a7da486ddb30a3cb9dad318066569580b6",
-          "version": "2.0.0"
-        }
-      },
-      {
-        "package": "ZenSwift",
-        "repositoryURL": "https://github.com/roland19deschain/ZenSwift",
-        "state": {
-          "branch": null,
-          "revision": "f529389369bfa695cc5845a0ee443c60bceab984",
-          "version": "2.1.1"
-        }
+  "pins" : [
+    {
+      "identity" : "zencoregraphics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/roland19deschain/ZenCoreGraphics",
+      "state" : {
+        "revision" : "e9c599a7da486ddb30a3cb9dad318066569580b6",
+        "version" : "2.0.0"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "zenswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/roland19deschain/ZenSwift",
+      "state" : {
+        "revision" : "7f79b191b9a8368fd3e2c1153bd23ccbe5ef8787",
+        "version" : "2.1.10"
+      }
+    }
+  ],
+  "version" : 2
 }
