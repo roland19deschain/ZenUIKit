@@ -5,36 +5,44 @@ extension UICollectionView {
 	/// Returns a set of cell reuse identifiers, registered in this class for reuse.
 	var cellReuseIdentifiersSet: Set<String> {
 		get {
-			(objc_getAssociatedObject(
-				self,
-				&Keys.cellReuseIdentifiers
-			) as? Set<String>) ?? Set()
+			withUnsafePointer(to: Keys.cellReuseIdentifiers) { pointer in
+				(objc_getAssociatedObject(
+					self,
+					pointer
+				) as? Set<String>) ?? Set()
+			}
 		}
 		set {
-			objc_setAssociatedObject(
-				self,
-				&Keys.cellReuseIdentifiers,
-				newValue,
-				.OBJC_ASSOCIATION_RETAIN_NONATOMIC
-			)
+			withUnsafePointer(to: Keys.cellReuseIdentifiers) { pointer in
+				objc_setAssociatedObject(
+					self,
+					Keys.cellReuseIdentifiers,
+					newValue,
+					.OBJC_ASSOCIATION_RETAIN_NONATOMIC
+				)
+			}
 		}
 	}
 	
 	/// Returns a set of supplementary view reuse identifiers, registered in this class for reuse.
 	var supplementaryReuseIdentifiersSet: Set<String> {
 		get {
-			(objc_getAssociatedObject(
-				self,
-				&Keys.supplementaryReuseIdentifiers
-			) as? Set<String>) ?? Set()
+			withUnsafePointer(to: Keys.supplementaryReuseIdentifiers) { pointer in
+				(objc_getAssociatedObject(
+					self,
+					pointer
+				) as? Set<String>) ?? Set()
+			}
 		}
 		set {
-			objc_setAssociatedObject(
-				self,
-				&Keys.supplementaryReuseIdentifiers,
-				newValue,
-				.OBJC_ASSOCIATION_RETAIN_NONATOMIC
-			)
+			withUnsafePointer(to: Keys.supplementaryReuseIdentifiers) { pointer in
+				objc_setAssociatedObject(
+					self,
+					pointer,
+					newValue,
+					.OBJC_ASSOCIATION_RETAIN_NONATOMIC
+				)
+			}
 		}
 	}
 	
