@@ -19,33 +19,25 @@ public extension UIImage {
 		// to prevent core graphics from rounding it up.
 		newSize.width = floor(newSize.width)
 		newSize.height = floor(newSize.height)
-
-		UIGraphicsBeginImageContextWithOptions(
-			newSize,
-			false,
-			scale
-		)
-		defer {
-			UIGraphicsEndImageContext()
+		return UIGraphicsImageRenderer(
+			size: newSize,
+			opaque: hasAlphaChannel,
+			scale: scale
+		).image { context in
+			context.cgContext.translateBy(
+				x: newSize.width / 2,
+				y: newSize.height / 2
+			)
+			context.cgContext.rotate(by: radians)
+			
+			let drawRect = CGRect(
+				x: -size.width / 2,
+				y: -size.height / 2,
+				width: size.width,
+				height: size.height
+			)
+			draw(in: drawRect)
 		}
-		guard let context = UIGraphicsGetCurrentContext() else {
-			return self
-		}
-		context.translateBy(
-			x: newSize.width / 2,
-			y: newSize.height / 2
-		)
-		context.rotate(by: radians)
-		
-		let drawRect = CGRect(
-			x: -size.width / 2,
-			y: -size.height / 2,
-			width: size.width,
-			height: size.height
-		)
-		draw(in: drawRect)
-		
-		return UIGraphicsGetImageFromCurrentImageContext() ?? self
 	}
 	
 	/**
@@ -54,28 +46,20 @@ public extension UIImage {
 	- returns: The image based on the receiver, rotated it in the direction of orientation.
 	*/
 	func rotated(to orientation: Orientation) -> UIImage {
-		UIGraphicsBeginImageContextWithOptions(
-			size,
-			false,
-			scale
-		)
-		defer {
-			UIGraphicsEndImageContext()
+		UIGraphicsImageRenderer(
+			size: size,
+			opaque: hasAlphaChannel,
+			scale: scale
+		).image { context in
+			switch orientation {
+			case .left:		context.cgContext.rotate(by: -90.radians)
+			case .right:	context.cgContext.rotate(by: 90.radians)
+			case .up:		break
+			case .down:		context.cgContext.rotate(by: 90.radians)
+			default:		break
+			}
+			draw(at: .zero)
 		}
-		guard let context = UIGraphicsGetCurrentContext() else {
-			return self
-		}
-		switch orientation {
-		case .left:		context.rotate(by: -90.radians)
-		case .right:	context.rotate(by: 90.radians)
-		case .up:		break
-		case .down:		context.rotate(by: 90.radians)
-		default:		break
-		}
-		
-		draw(at: .zero)
-		
-		return UIGraphicsGetImageFromCurrentImageContext() ?? self
 	}
 	
 }
