@@ -31,6 +31,7 @@ public extension UIImage {
 			destination,
 			cgImage,
 			[
+//				kCGImageDestinationImageMaxPixelSize : MaxPixelSize,
 				kCGImageDestinationLossyCompressionQuality: compressionQuality,
 				kCGImagePropertyOrientation: cgImageOrientation.rawValue
 			] as [CFString : Any] as CFDictionary

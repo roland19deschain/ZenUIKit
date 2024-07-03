@@ -17,11 +17,12 @@ public extension UIImage {
 			width: size.width * scaleFactor,
 			height: size.height * scaleFactor
 		)
-		return UIGraphicsImageRenderer(size: scaledImageSize).image { _ in
-			self.draw(in: CGRect(
-				origin: .zero,
-				size: scaledImageSize
-			))
+		return UIGraphicsImageRenderer(
+			size: scaledImageSize,
+			opaque: hasAlphaChannel,
+			scale: scale
+		).image { _ in
+			draw(in: CGRect(size: scaledImageSize))
 		}
 	}
 	
@@ -42,13 +43,13 @@ public extension UIImage {
 				height: imageSize.height * widthRatio
 			)
 		}
-		UIGraphicsBeginImageContextWithOptions(newSize, false, 1)
-		draw(in: .init(size: newSize))
-		guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
-			return self
+		return UIGraphicsImageRenderer(
+			size: newSize,
+			opaque: hasAlphaChannel,
+			scale: scale
+		).image { context in
+			draw(in: CGRect(size: newSize))
 		}
-		UIGraphicsEndImageContext()
-		return newImage
 	}
 	
 }

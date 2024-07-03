@@ -9,7 +9,7 @@ public extension UIImage {
 		guard let cgImage else {
 			return self
 		}
-		let alphaInfo: CGImageAlphaInfo = hasAlpha
+		let alphaInfo: CGImageAlphaInfo = hasAlphaChannel
 		? .noneSkipLast
 		: .premultipliedLast
 		
