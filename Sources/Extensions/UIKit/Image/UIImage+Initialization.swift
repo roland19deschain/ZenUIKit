@@ -1,4 +1,5 @@
 import UIKit
+import ZenCoreGraphics
 
 public extension UIImage {
 	
@@ -10,25 +11,16 @@ public extension UIImage {
 	 */
 	convenience init?(
 		color: UIColor,
-		size: CGSize = .init(width: 1, height: 1)
+		size: CGSize = CGSize(width: 1, height: 1)
 	) {
-		let rect = CGRect(
-			origin: .zero,
-			size: size
-		)
-		UIGraphicsBeginImageContextWithOptions(
-			size,
-			false,
-			0
-		)
-		defer {
-			UIGraphicsEndImageContext()
-		}
-		
-		color.setFill()
-		UIRectFill(rect)
-		
-		guard let cgImage = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else {
+		guard let cgImage = UIGraphicsImageRenderer(
+			size: size,
+			opaque: false,
+			scale: 1
+		).image(actions: { _ in
+			color.setFill()
+			UIRectFill( CGRect(size: size))
+		}).cgImage else {
 			return nil
 		}
 		self.init(cgImage: cgImage)

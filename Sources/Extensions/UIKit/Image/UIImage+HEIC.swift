@@ -25,13 +25,12 @@ public extension UIImage {
 			let cgImage
 		else {
 			return nil
-			
 		}
 		CGImageDestinationAddImage(
 			destination,
 			cgImage,
 			[
-//				kCGImageDestinationImageMaxPixelSize : MaxPixelSize,
+//				kCGImageDestinationImageMaxPixelSize : maxPixelSize,
 				kCGImageDestinationLossyCompressionQuality: compressionQuality,
 				kCGImagePropertyOrientation: cgImageOrientation.rawValue
 			] as [CFString : Any] as CFDictionary
