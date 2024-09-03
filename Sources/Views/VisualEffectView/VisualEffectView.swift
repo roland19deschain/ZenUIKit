@@ -4,12 +4,13 @@ open class VisualEffectView: UIVisualEffectView {
 	
 	// MARK: - Stored Properties
 	
-	private let animator: UIViewPropertyAnimator = .init()
+	private let animator = UIViewPropertyAnimator()
 	
 	// MARK: - Life Cycle
 	
 	public init() {
 		super.init(effect: nil)
+		setup()
 	}
 	
 	public required init?(coder aDecoder: NSCoder) {
@@ -18,6 +19,16 @@ open class VisualEffectView: UIVisualEffectView {
 	
 	deinit {
 		animator.stopAnimation(true)
+	}
+	
+}
+
+// MARK: - Setup
+
+private extension VisualEffectView {
+	
+	func setup() {
+		animator.pausesOnCompletion = true
 	}
 	
 }
@@ -32,7 +43,7 @@ public extension VisualEffectView {
 			guard let self else {
 				return
 			}
-			self.effect = visualEffect
+			effect = visualEffect
 		}
 	}
 	

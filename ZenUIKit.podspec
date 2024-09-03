@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'ZenUIKit'
-  spec.version          = '2.0.48'
+  spec.version          = '2.1.3'
   spec.swift_version    = '5.9'
   spec.summary          = 'ZenUIKit is a collection of views, extensions and functions for UIKit framework.'
   spec.description      = <<-DESC
