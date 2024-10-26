@@ -21,7 +21,7 @@ public extension UIImage {
 		newSize.height = floor(newSize.height)
 		return UIGraphicsImageRenderer(
 			size: newSize,
-			opaque: hasAlphaChannel,
+			opaque: !hasAlphaChannel,
 			scale: scale
 		).image { context in
 			context.cgContext.translateBy(
@@ -48,7 +48,7 @@ public extension UIImage {
 	func rotated(to orientation: Orientation) -> UIImage {
 		UIGraphicsImageRenderer(
 			size: size,
-			opaque: hasAlphaChannel,
+			opaque: !hasAlphaChannel,
 			scale: scale
 		).image { context in
 			switch orientation {

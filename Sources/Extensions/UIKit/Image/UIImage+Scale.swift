@@ -19,7 +19,7 @@ public extension UIImage {
 		)
 		return UIGraphicsImageRenderer(
 			size: scaledImageSize,
-			opaque: hasAlphaChannel,
+			opaque: !hasAlphaChannel,
 			scale: scale
 		).image { _ in
 			draw(in: CGRect(size: scaledImageSize))
@@ -45,7 +45,7 @@ public extension UIImage {
 		}
 		return UIGraphicsImageRenderer(
 			size: newSize,
-			opaque: hasAlphaChannel,
+			opaque: !hasAlphaChannel,
 			scale: scale
 		).image { context in
 			draw(in: CGRect(size: newSize))

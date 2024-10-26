@@ -6,22 +6,18 @@ public extension UIImage {
 	 Returns an image decompressed by redrawing it in graphics context.
 	 */
 	var decompressed: UIImage {
-		guard let cgImage else {
-			return self
-		}
-		let alphaInfo: CGImageAlphaInfo = hasAlphaChannel
-		? .noneSkipLast
-		: .premultipliedLast
-		
-		guard let context = CGContext(
-			data: nil,
-			width: Int(size.width),
-			height: Int(size.height),
-			bitsPerComponent: 8,
-			bytesPerRow: 0,
-			space: CGColorSpaceCreateDeviceRGB(),
-			bitmapInfo: alphaInfo.rawValue
-		) else {
+		guard
+			let cgImage,
+			let context = CGContext(
+				data: nil,
+				width: Int(size.width),
+				height: Int(size.height),
+				bitsPerComponent: 8,
+				bytesPerRow: 0,
+				space: CGColorSpaceCreateDeviceRGB(),
+				bitmapInfo: cgImage.alphaInfo.rawValue
+			)
+		else {
 			return self
 		}
 		let rect = CGRect(
