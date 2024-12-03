@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/roland19deschain/ZenCoreGraphics",
       "state" : {
-        "revision" : "e9c599a7da486ddb30a3cb9dad318066569580b6",
-        "version" : "2.0.0"
+        "revision" : "4c75675c610163a47efbb0bfaa14882eb6d2b3e0",
+        "version" : "2.0.2"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/roland19deschain/ZenSwift",
       "state" : {
-        "revision" : "3f056c0c8c12e6d1e5c1c275598c6311a281b516",
-        "version" : "2.1.13"
+        "revision" : "f44f7074bb12b4bc0b1728b0077ff69de5e2a29c",
+        "version" : "2.1.14"
       }
     }
   ],

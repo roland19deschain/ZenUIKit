@@ -1,4 +1,4 @@
-// swift-tools-version:5.9
+// swift-tools-version: 5.10
 
 import PackageDescription
 
@@ -13,8 +13,8 @@ let package = Package(
 		)
 	],
 	dependencies: [
-		.package(url: "https://github.com/roland19deschain/ZenSwift", from: "2.0.1"),
-		.package(url: "https://github.com/roland19deschain/ZenCoreGraphics", from: "2.0.0")
+		.package(url: "https://github.com/roland19deschain/ZenSwift", from: "2.1.14"),
+		.package(url: "https://github.com/roland19deschain/ZenCoreGraphics", from: "2.0.2")
 	],
 	targets: [
 		.target(
