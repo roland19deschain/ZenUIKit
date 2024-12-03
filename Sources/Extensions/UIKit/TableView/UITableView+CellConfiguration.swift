@@ -16,7 +16,6 @@ public extension UITableView {
 		configurator: (Cell) -> Void
 	) -> Cell {
 		let identifier: String = Cell.reuseIdentifier
-		
 		if !cellReuseIdentifiersSet.contains(identifier) {
 			cellReuseIdentifiersSet.insert(identifier)
 			
@@ -25,7 +24,6 @@ public extension UITableView {
 				forCellReuseIdentifier: identifier
 			)
 		}
-		
 		return cell(
 			at: indexPath,
 			reuseIdentifier: identifier,
@@ -47,7 +45,6 @@ public extension UITableView {
 		configurator: (Cell) -> Void
 	) -> Cell {
 		let identifier: String = Cell.reuseIdentifier
-		
 		if !cellReuseIdentifiersSet.contains(identifier) {
 			cellReuseIdentifiersSet.insert(identifier)
 			
@@ -59,7 +56,6 @@ public extension UITableView {
 				forCellReuseIdentifier: identifier
 			)
 		}
-		
 		return cell(
 			at: indexPath,
 			reuseIdentifier: identifier,
@@ -76,10 +72,7 @@ public extension UITableView {
 	 - returns: An empty reusable table-view cell object.
 	 */
 	func configuredEmptyCell(at indexPath: IndexPath) -> UITableViewCell {
-		configuredCell(
-			at: indexPath,
-			configurator: { _ in }
-		)
+		configuredCell(at: indexPath) { _ in }
 	}
 	
 }
@@ -97,9 +90,7 @@ private extension UITableView {
 			withIdentifier: reuseIdentifier,
 			for: indexPath
 		) as! Cell
-		
 		configurator(cell)
-		
 		return cell
 	}
 	

@@ -16,16 +16,13 @@ public extension UICollectionView {
 		configurator: (Cell) -> Void
 	) -> Cell {
 		let identifier: String = Cell.reuseIdentifier
-		
 		if !cellReuseIdentifiersSet.contains(identifier) {
 			cellReuseIdentifiersSet.insert(identifier)
-			
 			register(
 				Cell.self,
 				forCellWithReuseIdentifier: identifier
 			)
 		}
-		
 		return cell(
 			at: indexPath,
 			reuseIdentifier: identifier,
@@ -47,7 +44,6 @@ public extension UICollectionView {
 		configurator: (Cell) -> Void
 	) -> Cell {
 		let identifier: String = Cell.reuseIdentifier
-		
 		if !cellReuseIdentifiersSet.contains(identifier) {
 			cellReuseIdentifiersSet.insert(identifier)
 			
@@ -59,7 +55,6 @@ public extension UICollectionView {
 				forCellWithReuseIdentifier: identifier
 			)
 		}
-		
 		return cell(
 			at: indexPath,
 			reuseIdentifier: identifier,
@@ -76,10 +71,7 @@ public extension UICollectionView {
 	 - returns: An empty reusable collection-view cell object.
 	 */
 	func configuredEmptyCell(at indexPath: IndexPath) -> UICollectionViewCell {
-		configuredCell(
-			at: indexPath,
-			configurator: { _ in }
-		)
+		configuredCell(at: indexPath) { _ in }
 	}
 	
 }
@@ -97,9 +89,7 @@ private extension UICollectionView {
 			withReuseIdentifier: reuseIdentifier,
 			for: indexPath
 		) as! Cell
-		
 		configurator(cell)
-		
 		return cell
 	}
 	

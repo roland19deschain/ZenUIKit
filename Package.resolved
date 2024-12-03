@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/roland19deschain/ZenSwift",
       "state" : {
-        "revision" : "9a69792faa9ec06ae3675bebba406a2de9d20a50",
-        "version" : "2.1.11"
+        "revision" : "3f056c0c8c12e6d1e5c1c275598c6311a281b516",
+        "version" : "2.1.13"
       }
     }
   ],

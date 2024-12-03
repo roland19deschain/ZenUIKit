@@ -18,17 +18,14 @@ public extension UICollectionView {
 		configurator: (SupplementaryView) -> Void
 	) -> SupplementaryView {
 		let identifier: String = SupplementaryView.reuseIdentifier
-		
 		if !supplementaryReuseIdentifiersSet.contains(identifier) {
 			supplementaryReuseIdentifiersSet.insert(identifier)
-			
 			register(
 				SupplementaryView.self,
 				forSupplementaryViewOfKind: kind,
 				withReuseIdentifier: identifier
 			)
 		}
-		
 		return supplementaryView(
 			of: kind,
 			at: indexPath,
@@ -53,10 +50,8 @@ public extension UICollectionView {
 		configurator: (SupplementaryView) -> Void
 	) -> SupplementaryView? {
 		let identifier: String = SupplementaryView.reuseIdentifier
-		
 		if !supplementaryReuseIdentifiersSet.contains(identifier) {
 			supplementaryReuseIdentifiersSet.insert(identifier)
-			
 			register(
 				UINib(
 					nibName: identifier,
@@ -66,7 +61,6 @@ public extension UICollectionView {
 				withReuseIdentifier: identifier
 			)
 		}
-		
 		return supplementaryView(
 			of: kind,
 			at: indexPath,
@@ -88,24 +82,10 @@ public extension UICollectionView {
 		at indexPath: IndexPath,
 		of kind: String
 	) -> UICollectionReusableView {
-		let identifier: String = UICollectionReusableView.reuseIdentifier
-		
-		if !supplementaryReuseIdentifiersSet.contains(identifier) {
-			supplementaryReuseIdentifiersSet.insert(identifier)
-			
-			register(
-				UICollectionReusableView.self,
-				forSupplementaryViewOfKind: kind,
-				withReuseIdentifier: identifier
-			)
-		}
-		
-		return supplementaryView(
-			of: kind,
+		configuredSupplementaryView(
 			at: indexPath,
-			reuseIdentifier: identifier,
-			configurator: { _ in }
-		)
+			of: kind
+		) { _ in }
 	}
 	
 }
@@ -120,14 +100,12 @@ private extension UICollectionView {
 		reuseIdentifier: String,
 		configurator: (SupplementaryView) -> Void
 	) -> SupplementaryView {
-		let supplementaryView = dequeueReusableSupplementaryView(
+		let supplementaryView: SupplementaryView = dequeueReusableSupplementaryView(
 			ofKind: kind,
 			withReuseIdentifier: reuseIdentifier,
 			for: indexPath
 		) as! SupplementaryView
-		
 		configurator(supplementaryView)
-		
 		return supplementaryView
 	}
 	

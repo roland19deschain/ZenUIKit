@@ -14,7 +14,6 @@ public extension UITableView {
 		configurator: (HeaderFooter) -> Void
 	) -> HeaderFooter {
 		let identifier: String = HeaderFooter.reuseIdentifier
-		
 		if !headerFooterReuseIdentifiersSet.contains(identifier) {
 			headerFooterReuseIdentifiersSet.insert(identifier)
 			
@@ -23,7 +22,6 @@ public extension UITableView {
 				forHeaderFooterViewReuseIdentifier: identifier
 			)
 		}
-		
 		return headerFooter(
 			reuseIdentifier: identifier,
 			configurator: configurator
@@ -42,10 +40,8 @@ public extension UITableView {
 		configurator: (HeaderFooter) -> Void
 	) -> HeaderFooter? {
 		let identifier: String = HeaderFooter.reuseIdentifier
-		
 		if !headerFooterReuseIdentifiersSet.contains(identifier) {
 			headerFooterReuseIdentifiersSet.insert(identifier)
-			
 			register(
 				UINib(
 					nibName: identifier,
@@ -54,7 +50,6 @@ public extension UITableView {
 				forHeaderFooterViewReuseIdentifier: identifier
 			)
 		}
-		
 		return headerFooter(
 			reuseIdentifier: identifier,
 			configurator: configurator
@@ -69,7 +64,7 @@ public extension UITableView {
 	- returns: An empty reusable table-view header / footer object.
 	*/
 	var configuredEmptyHeaderFooter: UITableViewHeaderFooterView {
-		configuredHeaderFooter(configurator: { _ in })
+		configuredHeaderFooter { _ in }
 	}
 	
 }
@@ -82,12 +77,10 @@ private extension UITableView {
 		reuseIdentifier: String,
 		configurator: (HeaderFooter) -> Void
 	) -> HeaderFooter {
-		let headerFooter = dequeueReusableHeaderFooterView(
+		let headerFooter: HeaderFooter = dequeueReusableHeaderFooterView(
 			withIdentifier: reuseIdentifier
 		) as! HeaderFooter
-		
 		configurator(headerFooter)
-		
 		return headerFooter
 	}
 	
