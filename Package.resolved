@@ -1,4 +1,5 @@
 {
+  "originHash" : "f7d374af9f09a883db76fffef2d2e01bc85a680acae56d786ff7a98b73000505",
   "pins" : [
     {
       "identity" : "zencoregraphics",
@@ -14,10 +15,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/roland19deschain/ZenSwift",
       "state" : {
-        "revision" : "f44f7074bb12b4bc0b1728b0077ff69de5e2a29c",
-        "version" : "2.1.14"
+        "revision" : "8e7a22dab37347f8bb3a4faafc5dda5967349047",
+        "version" : "2.1.15"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
