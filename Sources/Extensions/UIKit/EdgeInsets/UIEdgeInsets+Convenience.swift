@@ -2,11 +2,9 @@ import UIKit
 
 public extension UIEdgeInsets {
 	
-	/**
-	 Builds an edge instets with all values equal to 'uniform' argument.
-	 - parameter uniform: Amount to inset (positive) for all of the edges. Value can be negative to 'outset'.
-	 - returns: A new edge insets instance with all equal values.
-	 */
+	/// Builds an edge instets with all values equal to 'uniform' argument.
+	/// - parameter uniform: Amount to inset (positive) for all of the edges. Value can be negative to 'outset'.
+	/// - returns: A new edge insets instance with all equal values.
 	init(uniform: CGFloat) {
 		self.init(
 			top: uniform,
@@ -16,13 +14,12 @@ public extension UIEdgeInsets {
 		)
 	}
 	
-	/**
-	 Builds an edge instets with 'left' and 'right' edges equals to 'horizontal' argument
-	 and 'top' and 'bottom' edges equals to 'vertical' argument.
-	 - parameter horizontal: Amount to inset (positive) for 'left' and 'right' edges. Value can be negative to 'outset'.
-	 - parameter vertical: Amount to inset (positive) for 'top' and 'bottom' edges. Value can be negative to 'outset'.
-	 - returns: A new edge insets instance.
-	 */
+	
+	/// Builds an edge instets with 'left' and 'right' edges equals to 'horizontal' argument
+	/// and 'top' and 'bottom' edges equals to 'vertical' argument.
+	/// - parameter horizontal: Amount to inset (positive) for 'left' and 'right' edges. Value can be negative to 'outset'.
+	/// - parameter vertical: Amount to inset (positive) for 'top' and 'bottom' edges. Value can be negative to 'outset'.
+	/// - returns: A new edge insets instance.
 	init(
 		horizontal: CGFloat,
 		vertical: CGFloat
