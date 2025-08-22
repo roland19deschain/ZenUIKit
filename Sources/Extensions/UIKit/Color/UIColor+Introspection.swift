@@ -47,4 +47,25 @@ public extension UIColor {
 		String(format: "%06x", hex).uppercased()
 	}
 	
+	/// Returns `true` if the color is a UIKit placeholder color (e.g., UIPlaceholderColor).
+	var isPlaceholder: Bool {
+		String(describing: self).contains("Placeholder")
+	}
+	
+	/// Returns `.clear` if color is placeholder (e.g., UIPlaceholderColor), otherwise returns self.
+	var safeColor: UIColor {
+		guard isPlaceholder else {
+			return self
+		}
+		return .clear
+	}
+	
+	/// Returns fallback color if placeholder (e.g., UIPlaceholderColor), otherwise returns self.
+	func safeColor(fallback: UIColor = .clear) -> UIColor {
+		guard isPlaceholder else {
+			return self
+		}
+		return fallback
+	}
+	
 }
