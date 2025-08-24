@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: - Life Cycle
+
 public extension NSDirectionalEdgeInsets {
 	
 	/// Creates directional edge insets with uniform values for all edges.
@@ -39,6 +41,22 @@ public extension NSDirectionalEdgeInsets {
 			bottom: vertical,
 			trailing: horizontal
 		)
+	}
+	
+}
+
+// MARK: - Introspection
+
+public extension NSDirectionalEdgeInsets {
+	
+	/// Returns the sum of leading and trailing insets.
+	var horizontal: CGFloat {
+		leading + trailing
+	}
+	
+	/// Returns the sum of top and bottom insets.
+	var vertical: CGFloat {
+		top + bottom
 	}
 	
 }

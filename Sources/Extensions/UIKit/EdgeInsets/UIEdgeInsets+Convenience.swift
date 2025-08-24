@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: - Life Cycle
+
 public extension UIEdgeInsets {
 	
 	/// Builds an edge instets with all values equal to 'uniform' argument.
@@ -30,6 +32,22 @@ public extension UIEdgeInsets {
 			bottom: vertical,
 			right: horizontal
 		)
+	}
+	
+}
+
+// MARK: - Introspection
+
+public extension UIEdgeInsets {
+	
+	/// Returns the sum of left and right insets.
+	var horizontal: CGFloat {
+		left + right
+	}
+	
+	/// Returns the sum of top and bottom insets.
+	var vertical: CGFloat {
+		top + bottom
 	}
 	
 }
