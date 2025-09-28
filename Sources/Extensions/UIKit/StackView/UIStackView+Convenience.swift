@@ -2,20 +2,28 @@ import UIKit
 
 public extension UIStackView {
 	
-	/// Adds a views to the end of the arrangedSubviews array,
-	/// also automatically adds each of the provided views as a subview of the stack view, if it is not already.
-	func addArrangedSubviews(_ arrangedSubviews: [UIView]) {
-		arrangedSubviews.forEach {
-			addArrangedSubview($0)
-		}
+	/// Adds multiple views from an array to the end of the arrangedSubviews array.
+	/// - Parameter views: Array of views to be added.
+	func addArrangedSubviews(_ views: [UIView]) {
+		views.forEach { addArrangedSubview($0) }
 	}
 	
-	/// Removes a subview from the list of arranged subviews,
-	/// also removing it as a subview of the receiver.
-	func removeAllArrangedSubviews() {
-		arrangedSubviews.forEach {
+	/// Adds multiple views to the end of the arrangedSubviews array.
+	/// - Parameter views: The views to be added.
+	func addArrangedSubviews(_ views: UIView...) {
+		views.forEach { addArrangedSubview($0) }
+	}
+	
+	/// Removes all views from the list of arranged subviews,
+	/// also removing them from the stack view’s hierarchy.
+	/// - Returns: The views that were removed.
+	@discardableResult func removeAllArrangedSubviews() -> [UIView] {
+		let result = arrangedSubviews
+		result.forEach {
+			removeArrangedSubview($0)
 			$0.removeFromSuperview()
 		}
+		return result
 	}
 	
 }
